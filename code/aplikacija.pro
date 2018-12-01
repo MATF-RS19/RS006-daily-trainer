@@ -14,12 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    korisnik.cpp \
-    form.cpp
+    drugiprozor.cpp \
+    statistika.cpp
 
 HEADERS  += mainwindow.h \
-    korisnik.h \
-    form.h
+    drugiprozor.h \
+    statistika.h
 
 FORMS    += mainwindow.ui \
-    form.ui
+    drugiprozor.ui \
+    statistika.ui

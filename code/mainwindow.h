@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "drugiprozor.h"
+#include "statistika.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +22,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    drugiprozor *drugiProzor;
+    statistika *stat;
 };
 
 #endif // MAINWINDOW_H
