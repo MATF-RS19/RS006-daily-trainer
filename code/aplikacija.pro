@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = aplikacija
 TEMPLATE = app
@@ -15,12 +15,20 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     drugiprozor.cpp \
-    statistika.cpp
+    statistika.cpp \
+    qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     drugiprozor.h \
-    statistika.h
+    statistika.h \
+    qcustomplot.h
 
 FORMS    += mainwindow.ui \
     drugiprozor.ui \
     statistika.ui
+
+RESOURCES += \
+    resource.qrc
+
+OTHER_FILES += \
+    sklekovi.txt

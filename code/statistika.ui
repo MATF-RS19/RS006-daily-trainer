@@ -13,20 +13,25 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QCustomPlot" name="CustomPLot" native="true">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>140</y>
-     <width>321</width>
-     <height>111</height>
+     <x>130</x>
+     <y>50</y>
+     <width>281</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>Ovde ce bit prikazana statistika!</string>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

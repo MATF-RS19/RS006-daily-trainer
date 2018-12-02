@@ -15,6 +15,8 @@ public:
     explicit statistika(QWidget *parent = nullptr);
     ~statistika();
 
+private slots:
+    void makePlot();
 private:
     Ui::statistika *ui;
 };
