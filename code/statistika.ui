@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QCustomPlot" name="CustomPLot" native="true">
+  <widget class="QCustomPlot" name="CustomPlot" native="true">
    <property name="geometry">
     <rect>
      <x>130</x>
