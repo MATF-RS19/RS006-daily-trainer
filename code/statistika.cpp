@@ -7,7 +7,7 @@
 #include <vector>
 #include <iterator>
 #include <algorithm>
-
+#include <QFile>
 statistika::statistika(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::statistika)
@@ -24,29 +24,29 @@ statistika::~statistika()
 
 void statistika::makePlot()
 {
-    std::vector<std::string> vecOfStr;
+    std::vector<QString> vecOfStr;
     //std::ifstream in("sklekovi.txt");
-    std::ifstream in(":/resource/data/sklekovi.txt");
-        // Check if object is valid
-        if(!in)
+    QFile file(":/resource/data/sklekovi.txt");
+
+     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             std::cerr << "Cannot open the File"<<std::endl;
 
         }
 
-        std::string str;
 
-        while (std::getline(in, str))
+        QTextStream in(&file);
+        while (!in.atEnd())
         {
-            if(str.size() > 0)
-                vecOfStr.push_back(str);
+            QString str=in.readLine();
+            vecOfStr.push_back(str);
         }
-        in.close();
 
 
-           std::vector<int> vektor;
-           std::transform(vecOfStr.begin(), vecOfStr.end(), std::back_inserter(vektor),
-                          [](const std::string& strin) { return std::stoi(strin); });
+
+    std::vector<int> vektor;
+    std::transform(vecOfStr.begin(), vecOfStr.end(), std::back_inserter(vektor),
+                          [](const QString& strin) { return strin.toInt(); });
     //RANDOM GRAFIK
     int n= vektor.size();
     QVector<double> x(n), y(n);
