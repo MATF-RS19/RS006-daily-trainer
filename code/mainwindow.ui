@@ -23,8 +23,11 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">text-alignment : center;</string>
+    </property>
     <property name="text">
-     <string>DOBRODOSLI U APLIKACIJU</string>
+     <string>                      DOBRODOŠLI</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -37,42 +40,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>IZABERITE TEZINU TRENINGA</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="horizontalSlider">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>80</y>
-      <width>301</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>2</number>
-    </property>
-    <property name="tracking">
-     <bool>true</bool>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="tickInterval">
-     <number>1</number>
+     <string>IZABERITE TEŽINU TRENINGA:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>130</y>
+      <y>90</y>
       <width>91</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>POCETNIK</string>
+     <string>POČETNIK</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -81,8 +62,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>130</y>
+      <x>50</x>
+      <y>110</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -94,7 +75,7 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>50</x>
       <y>130</y>
       <width>121</width>
       <height>17</height>
@@ -107,14 +88,60 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>170</y>
+      <x>100</x>
+      <y>180</y>
       <width>261</width>
       <height>81</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color :rgb(115, 210, 22);
+border-style: solid;
+border-color: black;
+border-width: 2px;
+border-radius: 20px;</string>
+    </property>
     <property name="text">
      <string>ZAPOCNI TRENING</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -124,7 +151,7 @@
      <x>0</x>
      <y>0</y>
      <width>458</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
