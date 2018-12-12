@@ -16,16 +16,19 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     drugiprozor.cpp \
     statistika.cpp \
-    qcustomplot.cpp
+    qcustomplot.cpp \
+    unesipodatke.cpp
 
 HEADERS  += mainwindow.h \
     drugiprozor.h \
     statistika.h \
-    qcustomplot.h
+    qcustomplot.h \
+    unesipodatke.h
 
 FORMS    += mainwindow.ui \
     drugiprozor.ui \
-    statistika.ui
+    statistika.ui \
+    unesipodatke.ui
 
 RESOURCES += \
     resource.qrc

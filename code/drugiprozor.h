@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "statistika.h"
+#include "unesipodatke.h"
 
 namespace Ui {
 class drugiprozor;
@@ -17,15 +18,11 @@ public:
     ~drugiprozor();
 
 private slots:
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-
     void on_pushButton_clicked();
 
 private:
     Ui::drugiprozor *ui;
-    statistika *stat;
+    unesiPodatke *unesipodatke;
 };
 
 #endif // DRUGIPROZOR_H

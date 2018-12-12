@@ -127,6 +127,19 @@
     <string>Statistika napretka korisnika:</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>314</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>NAZAD</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>
