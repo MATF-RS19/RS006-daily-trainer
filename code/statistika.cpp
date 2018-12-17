@@ -8,6 +8,7 @@
 #include <iterator>
 #include <algorithm>
 #include <QFile>
+#include <QDir>
 statistika::statistika(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::statistika)
@@ -26,7 +27,7 @@ void statistika::makePlot()
 {
     std::vector<QString> vecOfStr;
     //std::ifstream in("sklekovi.txt");
-    QFile file(":/resource/data/sklekovi.txt");
+    QFile file(QDir::currentPath() + "/podaci/tekstualniFajlovi/sklekovi.txt");
 
      if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
         {
@@ -67,3 +68,11 @@ void statistika::makePlot()
 
 }
 
+
+void statistika::on_comboBox_activated(const QString &arg1)
+{
+    if(arg1=="trbusnjaci")
+    qDebug()<<"radi";
+    if(arg1=="sklekovi")
+        qDebug()<<"radiiii";
+}

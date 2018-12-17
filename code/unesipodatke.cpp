@@ -7,17 +7,21 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDir>
+#include <QPushButton>
+#include <QPlainTextEdit>
 
 unesiPodatke::unesiPodatke(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::unesiPodatke)
 {
     ui->setupUi(this);
+
 }
 
 unesiPodatke::~unesiPodatke()
 {
     delete ui;
+
 }
 
 void unesiPodatke::on_pushButton_clicked()

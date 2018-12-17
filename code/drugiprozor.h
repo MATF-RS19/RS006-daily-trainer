@@ -4,7 +4,9 @@
 #include <QDialog>
 #include "statistika.h"
 #include "unesipodatke.h"
-
+#include <QAbstractItemModel>
+#include <QTime>
+#include "stopwatch.h"
 namespace Ui {
 class drugiprozor;
 }
@@ -19,10 +21,14 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-
+public slots:
+    void startStopTimer();
+    void resetTimer();
+    void update();
 private:
     Ui::drugiprozor *ui;
     unesiPodatke *unesipodatke;
+      Stopwatch* watch;
 };
 
 #endif // DRUGIPROZOR_H

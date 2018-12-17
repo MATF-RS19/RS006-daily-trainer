@@ -11,19 +11,21 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport core
 TARGET = aplikacija
 TEMPLATE = app
 
-QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++14
 SOURCES += main.cpp\
         mainwindow.cpp \
     drugiprozor.cpp \
     statistika.cpp \
     qcustomplot.cpp \
-    unesipodatke.cpp
+    unesipodatke.cpp \
+    stopwatch.cpp
 
 HEADERS  += mainwindow.h \
     drugiprozor.h \
     statistika.h \
     qcustomplot.h \
-    unesipodatke.h
+    unesipodatke.h \
+    stopwatch.h
 
 FORMS    += mainwindow.ui \
     drugiprozor.ui \
@@ -35,3 +37,4 @@ RESOURCES += \
 
 OTHER_FILES += \
     sklekovi.txt
+ICON = aplikacija.svg

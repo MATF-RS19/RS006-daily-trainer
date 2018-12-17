@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "statistika.h"
 
+
 namespace Ui {
 class unesiPodatke;
 }
@@ -26,6 +27,7 @@ private slots:
 private:
     Ui::unesiPodatke *ui;
     statistika *s;
+
 };
 
 #endif // UNESIPODATKE_H

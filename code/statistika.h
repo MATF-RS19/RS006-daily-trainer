@@ -17,6 +17,8 @@ public:
 
 private slots:
     void makePlot();
+    void on_comboBox_activated(const QString &arg1);
+
 private:
     Ui::statistika *ui;
 };
