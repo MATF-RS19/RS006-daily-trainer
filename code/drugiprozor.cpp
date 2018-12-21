@@ -15,11 +15,10 @@
 drugiprozor::drugiprozor(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::drugiprozor),
-    watch(new Stopwatch())
-{
+    watch(new Stopwatch()){
+
     // kod koji nije hteo da radi, a koji je trebao da ubaci vrednost u lcd ekran
     //koji definise dan treninga
-
     // ucitavamo broj treninga i dodajemo ga u nas lcd ekran
     //QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
     //QFile fajl(putanja);
@@ -32,30 +31,24 @@ drugiprozor::drugiprozor(QWidget *parent) :
     //in >> tezina;
     //in >> dan;
        //qDebug()<<tezina;
-
-
-    // povecavamo broj dana za 1 i upisujemo ponovo u fajl
+   // povecavamo broj dana za 1 i upisujemo ponovo u fajl
 
     ui->setupUi(this);
     QObject::connect(ui->startStopButton, &QPushButton::clicked,
                      this, &drugiprozor::startStopTimer);
     QObject::connect(ui->resetButton, &QPushButton::clicked,
                      this, &drugiprozor::resetTimer);
-                            //signal
+
      ui->lcdNumber->display(1);
      //dan++;
      //in << tezina << endl << dan << endl;
      //fajl.close();
-
-
-
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
-    timer->start(10);
+     QTimer *timer = new QTimer(this);
+     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
+     timer->start(10);
 }
 
-drugiprozor::~drugiprozor()
-{
+drugiprozor::~drugiprozor(){
     delete ui;
     delete watch;
 }
@@ -71,9 +64,6 @@ void drugiprozor::startStopTimer() {
     }
 }
 
-// Triggers when the "Reset" button is clicked
-// Stops the watch, if it is running,
-// and resets the "Pause"/"Restart" to "Start"
 void drugiprozor::resetTimer() {
     ui->startStopButton->setText("Start");
     ui->hundredthsText->setText("00");
@@ -82,8 +72,6 @@ void drugiprozor::resetTimer() {
     watch->reset();
 }
 
-// Triggers every 10 milliseconds (every hundredth of a second)
-// Updates the time displayed on the stopwatch.
 void drugiprozor::update()
 {
     if(watch->isRunning())
@@ -114,9 +102,10 @@ void drugiprozor::update()
         }
     }
 }
-void drugiprozor::on_pushButton_clicked()
-{
-   QString stotinke=ui->hundredthsText->toPlainText();
+
+void drugiprozor::on_pushButton_clicked(){
+
+    QString stotinke=ui->hundredthsText->toPlainText();
     QString sekundi=ui->secondsText->toPlainText();
     QString minuti =ui->minutesText->toPlainText();
 
@@ -131,7 +120,6 @@ void drugiprozor::on_pushButton_clicked()
 
     outtrcanje << minuti<<sekundi<<stotinke<< endl;
     trcanje.close();
-    // prikazujemo naredni prozor;
     hide();
 
     unesipodatke = new unesiPodatke(this);

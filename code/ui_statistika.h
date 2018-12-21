@@ -39,31 +39,44 @@ public:
     {
         if (statistika->objectName().isEmpty())
             statistika->setObjectName(QStringLiteral("statistika"));
-        statistika->resize(695, 375);
+        statistika->resize(656, 518);
+        QFont font;
+        font.setFamily(QStringLiteral("Purisa"));
+        font.setPointSize(12);
+        font.setBold(true);
+        font.setWeight(75);
+        statistika->setFont(font);
+        statistika->setStyleSheet(QStringLiteral(""));
         CustomPlot = new QCustomPlot(statistika);
         CustomPlot->setObjectName(QStringLiteral("CustomPlot"));
-        CustomPlot->setGeometry(QRect(160, 80, 321, 221));
+        CustomPlot->setGeometry(QRect(60, 80, 501, 221));
+        CustomPlot->setAutoFillBackground(false);
+        CustomPlot->setStyleSheet(QLatin1String("background-color : rgb(114, 159, 207);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 2px;\n"
+"border-radius: 20px;"));
         radioButton_4 = new QRadioButton(statistika);
         radioButton_4->setObjectName(QStringLiteral("radioButton_4"));
-        radioButton_4->setGeometry(QRect(510, 140, 151, 23));
+        radioButton_4->setGeometry(QRect(240, 330, 221, 23));
         radioButton_5 = new QRadioButton(statistika);
         radioButton_5->setObjectName(QStringLiteral("radioButton_5"));
-        radioButton_5->setGeometry(QRect(510, 180, 161, 23));
+        radioButton_5->setGeometry(QRect(240, 360, 211, 23));
         radioButton_6 = new QRadioButton(statistika);
         radioButton_6->setObjectName(QStringLiteral("radioButton_6"));
-        radioButton_6->setGeometry(QRect(510, 220, 161, 23));
+        radioButton_6->setGeometry(QRect(240, 390, 211, 23));
         label = new QLabel(statistika);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 100, 171, 41));
+        label->setGeometry(QRect(20, 320, 201, 41));
         label_2 = new QLabel(statistika);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(220, 10, 371, 51));
+        label_2->setGeometry(QRect(170, 10, 371, 51));
         pushButton = new QPushButton(statistika);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(240, 314, 151, 41));
+        pushButton->setGeometry(QRect(490, 350, 151, 41));
         comboBox = new QComboBox(statistika);
         comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(30, 140, 111, 27));
+        comboBox->setGeometry(QRect(40, 380, 131, 27));
 
         retranslateUi(statistika);
 

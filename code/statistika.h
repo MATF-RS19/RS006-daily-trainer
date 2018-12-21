@@ -16,8 +16,9 @@ public:
     ~statistika();
 
 private slots:
-    void makePlot();
+    void makePlot(QString,int);
     void on_comboBox_activated(const QString &arg1);
+    void on_pushButton_clicked();
 
 private:
     Ui::statistika *ui;

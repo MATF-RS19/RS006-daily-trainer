@@ -22,9 +22,6 @@ private:
     QDateTime mStartTime;
     QTime *time;
 
-signals:
-
-public slots:
 
 };
 

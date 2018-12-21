@@ -9,8 +9,7 @@ namespace Ui {
 class unesiPodatke;
 }
 
-class unesiPodatke : public QDialog
-{
+class unesiPodatke : public QDialog{
     Q_OBJECT
 
 public:
@@ -19,9 +18,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
-
     void on_pushButton_3_clicked();
 
 private:

@@ -9,19 +9,16 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
+    ui(new Ui::MainWindow){
     ui->setupUi(this);
 
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
-{
+void MainWindow::on_pushButton_clicked(){
     // Uzimamo odabrane podatke podatke
     int diff = 0;
     if(ui->radioButton->isChecked())
