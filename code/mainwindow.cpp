@@ -6,12 +6,17 @@
 #include <QDebug>
 #include <iostream>
 #include <QDir>
+#include <QWidget>
+#include <QPalette>
+
+static int tezina = 0;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow){
     ui->setupUi(this);
 
+    this->setWindowTitle("Glavni program");
 }
 
 MainWindow::~MainWindow(){
@@ -19,23 +24,6 @@ MainWindow::~MainWindow(){
 }
 
 void MainWindow::on_pushButton_clicked(){
-    // Uzimamo odabrane podatke podatke
-    int diff = 0;
-    if(ui->radioButton->isChecked())
-        diff = 1;
-    else if(ui->radioButton_2->isChecked())
-        diff = 2;
-    else if (ui->radioButton_3->isChecked())
-        diff = 3;
-
-    // Ako nismo cekirali nijedno dugme, ispisujemo poruku korisniku i
-    // cekamo da ga cekira.
-    if(diff == 0){
-        QMessageBox::information(this, "Radio Button", "Moramo odabrati tezinu treninga!");
-        return;
-    }
-
-
     // Upisujemo duzinu treninga u fajl nivo.txt
     QString str = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
     QFile file(str);
@@ -44,8 +32,15 @@ void MainWindow::on_pushButton_clicked(){
         return;
     }
     QTextStream out(&file);
-    out << diff << endl;
-    out << 1 << endl;
+    if(tezina == 0){
+        QMessageBox::information(this, "Push Button", "Moramo odabrati nivo!");
+        return;
+    }
+
+    out << tezina << endl;
+    out << 1 << endl;   // upisujemo dan treninga
+    out << 1 << endl;   // upisujemo indikator dana treninga
+
     file.close();
 
     // sakrivamo pocetni prozor
@@ -55,3 +50,31 @@ void MainWindow::on_pushButton_clicked(){
     drugiProzor->show();
 }
 
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    tezina = 1;
+
+    ui->pushButton_2->setStyleSheet({"background-color:red;"});
+    ui->pushButton_3->setStyleSheet({"background-color:aqua;"});
+    ui->pushButton_4->setStyleSheet({"background-color:aqua;"});
+
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+   tezina = 2;
+
+   ui->pushButton_3->setStyleSheet({"background-color:red;"});
+   ui->pushButton_2->setStyleSheet({"background-color:aqua;"});
+   ui->pushButton_4->setStyleSheet({"background-color:aqua;"});
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    tezina = 3;
+
+    ui->pushButton_4->setStyleSheet({"background-color:red;"});
+    ui->pushButton_2->setStyleSheet({"background-color:aqua;"});
+    ui->pushButton_3->setStyleSheet({"background-color:aqua;"});
+}

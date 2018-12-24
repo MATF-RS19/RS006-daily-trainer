@@ -10,7 +10,7 @@
 #include <QPlainTextEdit>
 #include <QTime>
 #include <QTimer>
-
+#include <QMovie>
 
 drugiprozor::drugiprozor(QWidget *parent) :
     QDialog(parent),
@@ -46,6 +46,100 @@ drugiprozor::drugiprozor(QWidget *parent) :
      QTimer *timer = new QTimer(this);
      connect(timer, SIGNAL(timeout()), this, SLOT(update()));
      timer->start(10);
+
+     // prvi gif za cucnjeve
+      QMovie *movie1 = new QMovie(":/podaci/gifovi/cucnjevi.gif");
+      QSize size(150, 100);
+      movie1->setScaledSize(size);
+      movie1->setSpeed(100);
+      if (!movie1->isValid())
+      {
+          qDebug() << ".gif file is not valid!" ;
+          return;
+      }
+      ui->label_9->setMovie(movie1);
+      movie1->start();
+
+      // drugi gif za trbusnjake
+      QMovie *movie2 = new QMovie(":/podaci/gifovi/trbusnjaci.gif");
+      movie2->setScaledSize(size);
+      if (!movie2->isValid())
+      {
+          qDebug() << ".gif file is not valid!" ;
+          return;
+      }
+      ui->label_8->setMovie(movie2);
+      movie2->start();
+
+      // treci gif za sklekove
+      QMovie *movie3 = new QMovie(":/podaci/gifovi/sklekovi.gif");
+      movie3->setScaledSize(size);
+      if (!movie3->isValid())
+      {
+          qDebug() << ".gif file is not valid!" ;
+          return;
+      }
+      ui->label_5->setMovie(movie3);
+      movie3->start();
+
+
+      // citamo podatke iz fajla i upisujemo u deo za treninge
+      QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
+      QFile fajl(putanja);
+      if(!fajl.open(QIODevice::ReadOnly)){
+          qDebug() << "Cannot open the File nivo.txt";
+          return;
+      }
+      int nivo = fajl.readLine().toInt();
+      int danTreninga = fajl.readLine().toInt();
+      int indikatorRedaTreninga = fajl.readLine().toInt();
+      fajl.close();
+
+     // u zavisnosti od nivoa, otvaramo odgovarajuci fajl sa vezbama
+     QString s;
+     if(nivo == 1){
+         s = "Lako";
+     } else if(nivo == 2){
+         s = "Srednje";
+     } else if(nivo == 3){
+         s = "Tesko";
+     }
+
+     // otvaramo fajl u zavisnosti od tezine treninga, na primer vezbeLako.txt
+     QString danasnjiTrening = QDir::currentPath() + "/podaci/tekstualniFajlovi/vezbe" + s + ".txt";
+     QFile fajlTrening(danasnjiTrening);
+     if(!fajlTrening.open(QIODevice::ReadWrite)){
+         qDebug() << "Cannot open the File .txt";
+         return;
+     }
+
+     // u zavisnosti od dana treninga citamo podatke iz n-tog reda, gde je n dan treninga
+     QString str;
+     QString sklekovi, trbusni, cucnjevi;
+     int line = 1;
+     while(!fajlTrening.atEnd()){
+         if(line == indikatorRedaTreninga){
+             str = fajlTrening.readLine();
+             QStringList podaci = str.split(" ");
+             sklekovi = podaci[0];
+             trbusni = podaci[1];
+             cucnjevi = podaci[2];
+             break;
+         } else {
+             fajlTrening.readLine();
+             line++;
+         }
+     }
+     fajlTrening.close();
+
+
+     ui->label_11->setText(sklekovi);
+     ui->label_12->setText(trbusni);
+     ui->label_13->setText(cucnjevi);
+
+     ui->lcdNumber->display(danTreninga);
+
+     this->setWindowTitle("Plan treninga za danas");
 }
 
 drugiprozor::~drugiprozor(){

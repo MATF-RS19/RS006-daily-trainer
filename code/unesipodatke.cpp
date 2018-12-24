@@ -9,12 +9,15 @@
 #include <QDir>
 #include <QPushButton>
 #include <QPlainTextEdit>
+#include <cctype>
 
 unesiPodatke::unesiPodatke(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::unesiPodatke)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("Unesite podatke sa treninga");
 
 }
 
@@ -26,6 +29,29 @@ unesiPodatke::~unesiPodatke()
 
 void unesiPodatke::on_pushButton_clicked()
 {
+    // Uzimamo vrednosti iz RadioButton-a
+    // i smestamo u promenljivu difficult
+    QString difficult;
+    bool rButton = false;
+    if(ui->radioButton->isChecked()){
+        difficult = "lako";
+        rButton = true;
+    }
+    else if(ui->radioButton_2->isChecked()){
+        difficult = "srednje";
+        rButton = true;
+    } else if (ui->radioButton_3->isChecked()){
+        difficult = "tesko" ;
+        rButton = true;
+    }
+
+    // Ako nismo cekirali nijedno dugme, ispisujemo poruku korisniku i
+    // cekamo da ga cekira.
+    if(!rButton){
+        QMessageBox::information(this, "Radio Button", "Moramo odabrati tezinu treninga!");
+        return;
+    }
+
     // Uzimamo podatke koje smo uneli u checkBox-ove
     int trbusnjaci;
     int sklekovi;
@@ -36,7 +62,7 @@ void unesiPodatke::on_pushButton_clicked()
 
     // Ako nismo popunili sva polja, necemo uneti podatke,
     // vec cemo dati poruku korisniku i sacekati da sve popuni
-    if(t == nullptr || s == nullptr || c == nullptr){
+    if(t == nullptr || s == nullptr || c == nullptr ){
         QMessageBox::information(this, "Rezultati", "Nismo popunili sva polja!");
         return;
     } else {
@@ -91,28 +117,37 @@ void unesiPodatke::on_pushButton_clicked()
         QMessageBox::information(this, "Rezultati", "Uspesno smo uneli rezultate!");
     }
 
-    // Uzimamo vrednosti iz RadioButton-a
-    // i smestamo u promenljivu difficult
-    QString difficult;
-    bool rButton = false;
-    if(ui->radioButton->isChecked()){
-        difficult = "lako";
-        rButton = true;
-    }
-    else if(ui->radioButton_2->isChecked()){
-        difficult = "srednje";
-        rButton = true;
-    } else if (ui->radioButton_3->isChecked()){
-        difficult = "tesko" ;
-        rButton = true;
-    }
 
-    // Ako nismo cekirali nijedno dugme, ispisujemo poruku korisniku i
-    // cekamo da ga cekira.
-    if(!rButton){
-        QMessageBox::information(this, "Radio Button", "Moramo odabrati tezinu treninga!");
+
+    // u zavisnosti od unetih podataka podesavamo parametre za sledece vezbe
+    QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
+    QFile fajl(putanja);
+    if(!fajl.open(QIODevice::ReadWrite)){
+        qDebug() << "Cannot open the File nivo.txt";
         return;
     }
+    int nivo = fajl.readLine().toInt();
+    int danTreninga = fajl.readLine().toInt();
+    int indikatorRedaTreninga = fajl.readLine().toInt();
+
+    danTreninga++;
+    if(difficult == "lako")
+        indikatorRedaTreninga += 2;
+    else if (difficult == "srednje")
+        indikatorRedaTreninga += 1;
+    fajl.close();
+
+    // Upisujemo nove podatke u nivo.txt
+    QFile fajl2(putanja);
+    if(!fajl2.open(QIODevice::ReadWrite | QIODevice::Truncate)){
+        qDebug() << "Cannot open the File nivo.txt";
+        return;
+    }
+    QTextStream out(&fajl2);
+    out << nivo << endl;
+    out << danTreninga << endl;
+    out << indikatorRedaTreninga;
+    fajl2.close();
 }
 
 void unesiPodatke::on_pushButton_2_clicked()

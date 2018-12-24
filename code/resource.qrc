@@ -1,4 +1,7 @@
 <RCC>
-    <qresource prefix="/resource">
+    <qresource prefix="/">
+        <file>podaci/gifovi/cucnjevi.gif</file>
+        <file>podaci/gifovi/sklekovi.gif</file>
+        <file>podaci/gifovi/trbusnjaci.gif</file>
     </qresource>
 </RCC>

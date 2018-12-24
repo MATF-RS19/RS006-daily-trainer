@@ -15,6 +15,8 @@ statistika::statistika(QWidget *parent) :
     ui->setupUi(this);
     setStyleSheet( "background-image:url(images.jpeg);" );
     statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),7);
+
+    this->setWindowTitle("Statistika");
 }
 
 statistika::~statistika(){
