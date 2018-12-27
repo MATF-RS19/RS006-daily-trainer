@@ -109,3 +109,40 @@ void statistika::on_pushButton_clicked()
    // drugiProzor = new drugiprozor(this);
     //drugiProzor->show();
 }
+
+void statistika::on_radioButton_4_clicked()
+{
+    if(ui->comboBox->currentIndex()==0)
+        statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),7);
+    if(ui->comboBox->currentIndex()==1)
+        statistika::makePlot(QString::fromStdString("sklekovi.txt"),7);
+    if(ui->comboBox->currentIndex()==2)
+        statistika::makePlot(QString::fromStdString("cucnjevi.txt"),7);
+    if(ui->comboBox->currentIndex()==3)
+        statistika::makePlot(QString::fromStdString("trcanje.txt"),7);
+}
+
+void statistika::on_radioButton_5_clicked()
+{
+    if(ui->comboBox->currentIndex()==0)
+        statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),15);
+    if(ui->comboBox->currentIndex()==1)
+        statistika::makePlot(QString::fromStdString("sklekovi.txt"),15);
+    if(ui->comboBox->currentIndex()==2)
+        statistika::makePlot(QString::fromStdString("cucnjevi.txt"),15);
+    if(ui->comboBox->currentIndex()==3)
+        statistika::makePlot(QString::fromStdString("trcanje.txt"),15);
+}
+
+void statistika::on_radioButton_6_clicked()
+{
+    if(ui->comboBox->currentIndex()==0)
+        statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),30);
+    if(ui->comboBox->currentIndex()==1)
+        statistika::makePlot(QString::fromStdString("sklekovi.txt"),30);
+    if(ui->comboBox->currentIndex()==2)
+        statistika::makePlot(QString::fromStdString("cucnjevi.txt"),30);
+    if(ui->comboBox->currentIndex()==3)
+        statistika::makePlot(QString::fromStdString("trcanje.txt"),30);
+
+}

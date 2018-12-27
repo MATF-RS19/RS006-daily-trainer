@@ -21,6 +21,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void on_slobodandan_clicked();
+
 public slots:
     void startStopTimer();
     void resetTimer();
@@ -28,7 +30,7 @@ public slots:
 private:
     Ui::drugiprozor *ui;
     unesiPodatke *unesipodatke;
-      Stopwatch* watch;
+    Stopwatch* watch;
 };
 
 #endif // DRUGIPROZOR_H

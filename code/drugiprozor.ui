@@ -380,6 +380,19 @@ p, li { white-space: pre-wrap; }
     <string>00</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="slobodandan">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>300</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SLOBODAN DAN</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -52,3 +52,4 @@ qint64 Stopwatch::getTime()
     qint64 time = mTotalTime + mTempTime;
     return time;
 }
+//ideja za implementaciju stoperice preuzeta sa interneta

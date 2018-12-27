@@ -17,38 +17,19 @@ drugiprozor::drugiprozor(QWidget *parent) :
     ui(new Ui::drugiprozor),
     watch(new Stopwatch()){
 
-    // kod koji nije hteo da radi, a koji je trebao da ubaci vrednost u lcd ekran
-    //koji definise dan treninga
-    // ucitavamo broj treninga i dodajemo ga u nas lcd ekran
-    //QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
-    //QFile fajl(putanja);
-    //if(!fajl.open(QIODevice::ReadWrite | QIODevice::Append)){
-        //qDebug() << "Cannot open the File sklekovi.txt";
-        //return;
-    //}
-    //QTextStream in(&fajl);
-    //int tezina, dan;
-    //in >> tezina;
-    //in >> dan;
-       //qDebug()<<tezina;
-   // povecavamo broj dana za 1 i upisujemo ponovo u fajl
-
     ui->setupUi(this);
     QObject::connect(ui->startStopButton, &QPushButton::clicked,
                      this, &drugiprozor::startStopTimer);
     QObject::connect(ui->resetButton, &QPushButton::clicked,
                      this, &drugiprozor::resetTimer);
 
-     ui->lcdNumber->display(1);
-     //dan++;
-     //in << tezina << endl << dan << endl;
-     //fajl.close();
+
      QTimer *timer = new QTimer(this);
      connect(timer, SIGNAL(timeout()), this, SLOT(update()));
      timer->start(10);
 
      // prvi gif za cucnjeve
-      QMovie *movie1 = new QMovie(":/podaci/gifovi/cucnjevi.gif");
+      QMovie *movie1 = new QMovie(QDir::currentPath() + "/podaci/gifovi/cucnjevi.gif");
       QSize size(150, 100);
       movie1->setScaledSize(size);
       movie1->setSpeed(100);
@@ -61,7 +42,7 @@ drugiprozor::drugiprozor(QWidget *parent) :
       movie1->start();
 
       // drugi gif za trbusnjake
-      QMovie *movie2 = new QMovie(":/podaci/gifovi/trbusnjaci.gif");
+      QMovie *movie2 = new QMovie(QDir::currentPath() + "/podaci/gifovi/trbusnjaci.gif");
       movie2->setScaledSize(size);
       if (!movie2->isValid())
       {
@@ -72,7 +53,7 @@ drugiprozor::drugiprozor(QWidget *parent) :
       movie2->start();
 
       // treci gif za sklekove
-      QMovie *movie3 = new QMovie(":/podaci/gifovi/sklekovi.gif");
+      QMovie *movie3 = new QMovie( QDir::currentPath() + "/podaci/gifovi/sklekovi.gif");
       movie3->setScaledSize(size);
       if (!movie3->isValid())
       {
@@ -94,7 +75,13 @@ drugiprozor::drugiprozor(QWidget *parent) :
       int danTreninga = fajl.readLine().toInt();
       int indikatorRedaTreninga = fajl.readLine().toInt();
       fajl.close();
-
+      qDebug() <<danTreninga<<nivo<<indikatorRedaTreninga;
+      if((danTreninga==0) || ((nivo==1) && (nivo%4!=0)))
+          ui->slobodandan->setVisible(false);
+      if((nivo==2) && (nivo%5!=0))
+          ui->slobodandan->setVisible(false);
+      if((nivo==3) && (nivo%6!=0))
+          ui->slobodandan->setVisible(false);
      // u zavisnosti od nivoa, otvaramo odgovarajuci fajl sa vezbama
      QString s;
      if(nivo == 1){
@@ -199,8 +186,7 @@ void drugiprozor::update()
 
 void drugiprozor::on_pushButton_clicked(){
 
-    QString stotinke=ui->hundredthsText->toPlainText();
-    QString sekundi=ui->secondsText->toPlainText();
+
     QString minuti =ui->minutesText->toPlainText();
 
 
@@ -212,10 +198,15 @@ void drugiprozor::on_pushButton_clicked(){
     }
     QTextStream outtrcanje(&trcanje);
 
-    outtrcanje << minuti<<sekundi<<stotinke<< endl;
+    outtrcanje << minuti<< endl;
     trcanje.close();
     hide();
 
     unesipodatke = new unesiPodatke(this);
     unesipodatke->show();
+}
+
+void drugiprozor::on_slobodandan_clicked()
+{
+    drugiprozor::close();
 }
