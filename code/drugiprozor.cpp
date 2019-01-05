@@ -24,17 +24,13 @@ drugiprozor::drugiprozor(QWidget *parent) :
                      this, &drugiprozor::startStopTimer);
     QObject::connect(ui->resetButton, &QPushButton::clicked,
                      this, &drugiprozor::resetTimer);
-
-
      // dodajemo minimize dugme
      this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
-
-
+     //tajmer za stopericu
      QTimer *timer = new QTimer(this);
      connect(timer, SIGNAL(timeout()), this, SLOT(update()));
      timer->start(10);
-
-     // prvi gif za cucnjeve
+      // prvi gif za cucnjeve
       QMovie *movie1 = new QMovie(":/podaci/gifovi/cucnjevi.gif");
       QSize size(150, 100);
       movie1->setScaledSize(size);
@@ -68,8 +64,6 @@ drugiprozor::drugiprozor(QWidget *parent) :
       }
       ui->label_5->setMovie(movie3);
       movie3->start();
-
-
       // citamo podatke iz fajla i upisujemo u deo za treninge
       QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
       QFile fajl(putanja);
@@ -80,49 +74,17 @@ drugiprozor::drugiprozor(QWidget *parent) :
       int nivo = fajl.readLine().toInt();
       int danTreninga = fajl.readLine().toInt();
       int indikatorRedaTreninga = fajl.readLine().toInt();
+      qDebug() << danTreninga<<nivo;
+
       fajl.close();
 
       // gledamo da li korisnik zeli da ima slobodan dan
-      bool slobodanDan = false;
-
-      if((danTreninga == 0) || ((nivo == 1) && (danTreninga % 4 == 0)))
-          slobodanDan = true;  
-      if((nivo == 2) && (danTreninga % 5 == 0))
-          slobodanDan = true;
-      if((nivo == 3) && (danTreninga % 6 == 0))
-          slobodanDan = true;
-
-      // ako korisnik zeli da ima slobodan dan
-      if(slobodanDan){
-          ui->label_2->setVisible(false);
-          ui->label_3->setVisible(false);
-          ui->label_4->setVisible(false);
-          ui->label_5->setVisible(false);
-          ui->label_6->setVisible(false);
-          ui->label_7->setVisible(false);
-          ui->label_8->setVisible(false);
-          ui->label_9->setVisible(false);
-          ui->label_10->setVisible(false);
-          ui->label_11->setVisible(false);
-          ui->label_12->setVisible(false);
-          ui->label_13->setVisible(false);
-          ui->label_14->setVisible(false);
-          ui->hundredthsText->setVisible(false);
-          ui->lcdNumber->setVisible(false);
-          ui->minutesText->setVisible(false);
-          ui->pushButton->setVisible(false);
-          ui->resetButton->setVisible(false);
-          ui->secondsText->setVisible(false);
-          ui->startStopButton->setVisible(false);
-
-          return;
-      } else {
-          ui->label->setVisible(false);
-          ui->label_15->setVisible(false);
-          ui->pushButton_2->setVisible(false);
-          ui->pushButton_3->setVisible(false);
-      }
-
+      if((danTreninga==0) || ((nivo==1) && (nivo%4!=0)))
+                ui->pushButton_2->setVisible(false);
+            if((nivo==2) && (nivo%5!=0))
+                ui->pushButton_2->setVisible(false);
+            if((nivo==3) && (nivo%6!=0))
+                ui->pushButton_2->setVisible(false);
      // u zavisnosti od nivoa, otvaramo odgovarajuci fajl sa vezbama
      QString s;
      if(nivo == 1){
@@ -256,4 +218,7 @@ void drugiprozor::on_pushButton_clicked(){
     up.exec();
 }
 
-
+void drugiprozor::on_pushButton_2_clicked()
+{
+    drugiprozor::close();
+}

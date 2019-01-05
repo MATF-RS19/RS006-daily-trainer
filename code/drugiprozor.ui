@@ -167,7 +167,7 @@ height: 20;</string>
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>350</y>
+     <y>330</y>
      <width>51</width>
      <height>21</height>
     </rect>
@@ -396,7 +396,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>200</x>
      <y>100</y>
      <width>771</width>
      <height>131</height>
@@ -406,55 +406,20 @@ p, li { white-space: pre-wrap; }
     <string notr="true">font-size:40px;</string>
    </property>
    <property name="text">
-    <string>Danas Vam preporučujemo slobodan dan. </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_15">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>180</y>
-     <width>671</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font-size:40px;</string>
-   </property>
-   <property name="text">
-    <string>Da li želite pauzu ? </string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>250</y>
-     <width>191</width>
-     <height>51</height>
+     <x>930</x>
+     <y>660</y>
+     <width>99</width>
+     <height>27</height>
     </rect>
    </property>
    <property name="text">
-    <string>DA</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>250</y>
-     <width>191</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>NE</string>
+    <string>slobodan dan</string>
    </property>
   </widget>
  </widget>

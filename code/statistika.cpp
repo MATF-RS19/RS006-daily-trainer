@@ -23,6 +23,7 @@ statistika::statistika(QWidget *parent) :
 
     this->setWindowTitle("Statistika");
     ui->label_3->setVisible(false);
+     ui->pushButton_2->setVisible(false);
     ui->radioButton_4->setChecked(true);
 }
 
@@ -31,6 +32,7 @@ statistika::~statistika(){
 }
 
 void statistika::makePlot(QString ime, int dani){
+    //citamo podatke kao Qstring
     std::vector<QString> vecOfStr;
     QFile file(QDir::currentPath() + "/podaci/tekstualniFajlovi/"+ime);
 
@@ -43,18 +45,19 @@ void statistika::makePlot(QString ime, int dani){
             vecOfStr.push_back(str);
         }
     std::vector<int> vektor;
+    //prebacujemo u int
     std::transform(vecOfStr.begin(), vecOfStr.end(), std::back_inserter(vektor),
                           [](const QString& strin) { return strin.toInt(); });
     int n= vektor.size();
-    QVector<double> x(dani), y(dani);
-    for (int i=0; i<dani; ++i) {
+    QVector<double> x(dani+1), y(dani+1);
+    for (int i=0; i<=dani; ++i) {
       x[i] = i;
       if(n>i)
            y[i] = vektor[i];
      else
           y[i] = 0;
 }
-
+   //crtamo grafik
     ui->CustomPlot->addGraph();
     ui->CustomPlot->graph(0)->setData(x, y);
     QColor color(0,0,50,120);
@@ -70,7 +73,7 @@ void statistika::makePlot(QString ime, int dani){
     ui->CustomPlot->replot();
 
 }
-
+//proveramo koje su opcije za ispis grafika
 void statistika::on_comboBox_activated(const QString &arg1){
     if(arg1=="trbusnjaci"){
         if (ui->radioButton_4->isChecked())
@@ -162,9 +165,16 @@ void statistika::on_pushButton_5_clicked()
 {
     if(ui->label_3->isHidden() ){
         ui->label_3->setWindowOpacity(0.2);
+         ui->pushButton_2->setVisible(true);
         ui->label_3->setVisible(true);
         ui->label_3->setWordWrap(true);
     } else {
         ui->label_3->setVisible(false);
     }
+}
+
+void statistika::on_pushButton_2_clicked()
+{
+     ui->label_3->setVisible(false);
+     ui->pushButton_2->setVisible(false);
 }

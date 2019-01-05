@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->setWindowTitle("Glavni program");
     ui->label_3->setVisible(false);
+    ui->pushButton_6->setVisible(false);
 }
 
 MainWindow::~MainWindow(){
@@ -100,8 +101,16 @@ void MainWindow::on_pushButton_5_clicked()
 {
     if(ui->label_3->isHidden() ){
         ui->label_3->setVisible(true);
+        ui->pushButton_6->setVisible(true);
         ui->label_3->setWordWrap(true);
     } else {
         ui->label_3->setVisible(false);
+        ui->pushButton_6->setVisible(false);
     }
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    ui->label_3->setVisible(false);
+    ui->pushButton_6->setVisible(false);
 }

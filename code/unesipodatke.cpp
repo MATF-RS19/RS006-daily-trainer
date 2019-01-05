@@ -28,6 +28,7 @@ unesiPodatke::unesiPodatke(QWidget *parent) :
 
     this->setWindowTitle("Unesite podatke sa treninga");
     ui->label_3->setVisible(false);
+    ui->pushButton_7->setVisible(false);
 }
 
 unesiPodatke::~unesiPodatke()
@@ -198,6 +199,7 @@ void unesiPodatke::on_pushButton_5_clicked()
     if(ui->label_3->isHidden() ){
         ui->label_3->setWindowOpacity(0.2);
         ui->label_3->setVisible(true);
+             ui->pushButton_7->setVisible(true);
         ui->label_3->setWordWrap(true);
     } else {
         ui->label_3->setVisible(false);
@@ -230,4 +232,10 @@ void unesiPodatke::on_pushButton_6_clicked()
     // dodati za vracanje unazad i promenu tezine treninga
     MainWindow mw;
     mw.showMaximized();
+}
+
+void unesiPodatke::on_pushButton_7_clicked()
+{
+             ui->pushButton_7->setVisible(false);
+                 ui->label_3->setVisible(false);
 }

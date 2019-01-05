@@ -190,6 +190,19 @@ border-radius: 20px;
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Ovde možemo videti statistiku napretka za svaku &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;vežbu pojedinacno.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;U opadajućem meniju možemo odabrati za koju vežbu &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;želimo videti graf.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Pored toga, možemo odabrati da &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;li želimo videti graf za poslednjih &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;7, 15 ili 30 dana.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Klikom na dugme &amp;quot;Nazad&amp;quot; vratićemo se unazad, na ekran sa unošenjem podataka o urađenim vežbama.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>620</y>
+     <width>99</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>izlaz</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>

@@ -155,6 +155,19 @@ border-radius: 20px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Ovde treba izabrati težinu treninga. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Početnik: osoba koja dugo nije bila aktivna. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Prosek: osoba koja je umereno aktivna.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Profesionalac: osoba koja aktivno trenira. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon odabira težine treninga, kliknite na &amp;quot;Započni trening&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>400</y>
+      <width>99</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>izlaz</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -162,7 +175,7 @@ border-radius: 20px;</string>
      <x>0</x>
      <y>0</y>
      <width>1109</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
