@@ -13,7 +13,6 @@ int main(int argc, char *argv[]){
     MainWindow w;
     drugiprozor dp;
 
-
     // otvaramo fajl nivo.txt i ako je u njemu != 0
     // prelazimo odmah na drugi prozor!
     int val;

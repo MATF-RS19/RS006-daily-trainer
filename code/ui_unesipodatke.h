@@ -45,7 +45,7 @@ public:
     {
         if (unesiPodatke->objectName().isEmpty())
             unesiPodatke->setObjectName(QString::fromUtf8("unesiPodatke"));
-        unesiPodatke->resize(1171, 760);
+        unesiPodatke->resize(960, 658);
         pushButton_3 = new QPushButton(unesiPodatke);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(900, 560, 171, 61));
@@ -140,7 +140,7 @@ public:
 "border-radius: 20px;"));
         label_3 = new QLabel(unesiPodatke);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(0, -20, 1171, 561));
+        label_3->setGeometry(QRect(0, 10, 891, 541));
         label_3->setStyleSheet(QString::fromUtf8("font-size:5px;\n"
 "background-color:#ccc;\n"
 "border-radius: 20px;"));

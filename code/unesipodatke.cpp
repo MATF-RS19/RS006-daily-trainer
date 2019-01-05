@@ -121,8 +121,12 @@ void unesiPodatke::on_pushButton_clicked()
         cucnjeviFajl.close();
 
         // Ako se sve izvrsilo kako treba iskace prozor na kome pise da smo uspesno uneli rezultate
-        QMessageBox::information(this, "Rezultati", "Uspešno smo uneli rezultate!");
-        popunjeniPodaci = true;
+        if(popunjeniPodaci){
+            QMessageBox::information(this, "Rezultati", "Već smo uneli rezultate!");
+        } else {
+            QMessageBox::information(this, "Rezultati", "Uspešno smo uneli rezultate!");
+            popunjeniPodaci = true;
+        }
     }
 
 
@@ -220,4 +224,6 @@ void unesiPodatke::on_pushButton_6_clicked()
     }
 
     // dodati za vracanje unazad i promenu tezine treninga
+    MainWindow mw;
+    mw.showMaximized();
 }
