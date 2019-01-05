@@ -23,6 +23,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow){
     ui->setupUi(this);
 
+    // dodajemo minimize dugme
+    this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
+
     this->setWindowTitle("Glavni program");
     ui->label_3->setVisible(false);
 }

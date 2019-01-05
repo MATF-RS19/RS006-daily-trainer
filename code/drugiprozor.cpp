@@ -26,6 +26,10 @@ drugiprozor::drugiprozor(QWidget *parent) :
                      this, &drugiprozor::resetTimer);
 
 
+     // dodajemo minimize dugme
+     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
+
+
      QTimer *timer = new QTimer(this);
      connect(timer, SIGNAL(timeout()), this, SLOT(update()));
      timer->start(10);

@@ -22,6 +22,10 @@ unesiPodatke::unesiPodatke(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // dodajemo minimize dugme
+    this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
+
+
     this->setWindowTitle("Unesite podatke sa treninga");
     ui->label_3->setVisible(false);
 }

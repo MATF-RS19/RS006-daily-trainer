@@ -18,6 +18,9 @@ statistika::statistika(QWidget *parent) :
     setStyleSheet( "background-image:url(:/podaci/slike/images.jpeg);" );
     statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),7);
 
+    // dodajemo minimize dugme
+    this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
+
     this->setWindowTitle("Statistika");
     ui->label_3->setVisible(false);
     ui->radioButton_4->setChecked(true);
