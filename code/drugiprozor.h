@@ -3,10 +3,10 @@
 
 #include <QDialog>
 #include "statistika.h"
-#include "unesipodatke.h"
 #include <QAbstractItemModel>
 #include <QTime>
 #include "stopwatch.h"
+
 namespace Ui {
 class drugiprozor;
 }
@@ -21,7 +21,6 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void on_slobodandan_clicked();
 
 public slots:
     void startStopTimer();
@@ -29,7 +28,6 @@ public slots:
     void update();
 private:
     Ui::drugiprozor *ui;
-    unesiPodatke *unesipodatke;
     Stopwatch* watch;
 };
 

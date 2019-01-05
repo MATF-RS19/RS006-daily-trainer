@@ -3,5 +3,6 @@
         <file>podaci/gifovi/cucnjevi.gif</file>
         <file>podaci/gifovi/sklekovi.gif</file>
         <file>podaci/gifovi/trbusnjaci.gif</file>
+        <file>podaci/slike/images.jpeg</file>
     </qresource>
 </RCC>

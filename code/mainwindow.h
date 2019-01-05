@@ -2,8 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "drugiprozor.h"
-#include "statistika.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,10 +24,10 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::MainWindow *ui;
-    drugiprozor *drugiProzor;
-    statistika *stat;
 };
 
 #endif // MAINWINDOW_H

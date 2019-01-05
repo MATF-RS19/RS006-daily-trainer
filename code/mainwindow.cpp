@@ -1,6 +1,4 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "QMessageBox"
+#include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
@@ -8,7 +6,16 @@
 #include <QDir>
 #include <QWidget>
 #include <QPalette>
+#include <QDesktopWidget>
 
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "drugiprozor.h"
+#include "statistika.h"
+
+// posto tezinu treninga koristimo u vise funkcija,
+// da je ne bismo mnogo puta citali iz fajla,
+// najbolje je definisati kao staticku
 static int tezina = 0;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -17,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     this->setWindowTitle("Glavni program");
+    ui->label_3->setVisible(false);
 }
 
 MainWindow::~MainWindow(){
@@ -24,7 +32,8 @@ MainWindow::~MainWindow(){
 }
 
 void MainWindow::on_pushButton_clicked(){
-    // Upisujemo duzinu treninga u fajl nivo.txt
+
+    // Upisujemo tezinu treninga u fajl nivo.txt
     QString str = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
     QFile file(str);
     if(!file.open(QIODevice::ReadWrite | QIODevice::Text)){
@@ -40,17 +49,20 @@ void MainWindow::on_pushButton_clicked(){
     out << tezina << endl;
     out << 1 << endl;   // upisujemo dan treninga
     out << 1 << endl;   // upisujemo indikator dana treninga
-
     file.close();
 
-    // sakrivamo pocetni prozor
+    // prelazimo na sledeci prozor gde ce nam se
+    // prikazati vezbe koje korisnik treba da radi
     hide();
-    // pravimo naredni prozor i pozivamo ga
-    drugiProzor = new drugiprozor(this);
-    drugiProzor->show();
+    QDesktopWidget dw;
+
+    drugiprozor dp;
+    dp.setFixedSize(dw.width(), dw.height());
+    dp.setModal(true);
+    dp.exec();
 }
 
-
+// klik na dugme "pocetnik"
 void MainWindow::on_pushButton_2_clicked()
 {
     tezina = 1;
@@ -58,9 +70,9 @@ void MainWindow::on_pushButton_2_clicked()
     ui->pushButton_2->setStyleSheet({"background-color:red;"});
     ui->pushButton_3->setStyleSheet({"background-color:aqua;"});
     ui->pushButton_4->setStyleSheet({"background-color:aqua;"});
-
 }
 
+// klik na dugme "prosek"
 void MainWindow::on_pushButton_3_clicked()
 {
    tezina = 2;
@@ -70,6 +82,7 @@ void MainWindow::on_pushButton_3_clicked()
    ui->pushButton_4->setStyleSheet({"background-color:aqua;"});
 }
 
+// klik na dugme "profesionalac"
 void MainWindow::on_pushButton_4_clicked()
 {
     tezina = 3;
@@ -77,4 +90,15 @@ void MainWindow::on_pushButton_4_clicked()
     ui->pushButton_4->setStyleSheet({"background-color:red;"});
     ui->pushButton_2->setStyleSheet({"background-color:aqua;"});
     ui->pushButton_3->setStyleSheet({"background-color:aqua;"});
+}
+
+// klik na "help" dugme
+void MainWindow::on_pushButton_5_clicked()
+{
+    if(ui->label_3->isHidden() ){
+        ui->label_3->setVisible(true);
+        ui->label_3->setWordWrap(true);
+    } else {
+        ui->label_3->setVisible(false);
+    }
 }

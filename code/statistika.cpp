@@ -1,6 +1,3 @@
-#include "statistika.h"
-#include "ui_statistika.h"
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,14 +6,21 @@
 #include <algorithm>
 #include <QFile>
 #include <QDir>
+
+#include "statistika.h"
+#include "ui_statistika.h"
+#include "unesipodatke.h"
+
 statistika::statistika(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::statistika){
     ui->setupUi(this);
-    setStyleSheet( "background-image:url(images.jpeg);" );
+    setStyleSheet( "background-image:url(:/podaci/slike/images.jpeg);" );
     statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),7);
 
     this->setWindowTitle("Statistika");
+    ui->label_3->setVisible(false);
+    ui->radioButton_4->setChecked(true);
 }
 
 statistika::~statistika(){
@@ -64,7 +68,6 @@ void statistika::makePlot(QString ime, int dani){
 
 }
 
-
 void statistika::on_comboBox_activated(const QString &arg1){
     if(arg1=="trbusnjaci"){
         if (ui->radioButton_4->isChecked())
@@ -102,12 +105,17 @@ statistika::makePlot(QString::fromStdString("trcanje.txt"),30);}
 
 }
 
+// vracanje unazad na unosenje podataka
 void statistika::on_pushButton_clicked()
 {
- //   hide();
-    // pravimo naredni prozor i pozivamo ga
-   // drugiProzor = new drugiprozor(this);
-    //drugiProzor->show();
+    hide();
+
+    QDesktopWidget dw;
+    unesiPodatke up;
+
+    up.setModal(true);
+    up.setFixedSize(dw.width(), dw.height());
+    up.exec();
 }
 
 void statistika::on_radioButton_4_clicked()
@@ -144,5 +152,16 @@ void statistika::on_radioButton_6_clicked()
         statistika::makePlot(QString::fromStdString("cucnjevi.txt"),30);
     if(ui->comboBox->currentIndex()==3)
         statistika::makePlot(QString::fromStdString("trcanje.txt"),30);
+}
 
+// klik na "help" dugme kod statistike
+void statistika::on_pushButton_5_clicked()
+{
+    if(ui->label_3->isHidden() ){
+        ui->label_3->setWindowOpacity(0.2);
+        ui->label_3->setVisible(true);
+        ui->label_3->setWordWrap(true);
+    } else {
+        ui->label_3->setVisible(false);
+    }
 }
