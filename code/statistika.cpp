@@ -22,8 +22,7 @@ statistika::statistika(QWidget *parent) :
     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
 
     this->setWindowTitle("Statistika");
-    ui->label_3->setVisible(false);
-     ui->pushButton_2->setVisible(false);
+    ui->label_3->setVisible(false);    
     ui->radioButton_4->setChecked(true);
 }
 
@@ -165,7 +164,6 @@ void statistika::on_pushButton_5_clicked()
 {
     if(ui->label_3->isHidden() ){
         ui->label_3->setWindowOpacity(0.2);
-         ui->pushButton_2->setVisible(true);
         ui->label_3->setVisible(true);
         ui->label_3->setWordWrap(true);
     } else {
@@ -173,8 +171,3 @@ void statistika::on_pushButton_5_clicked()
     }
 }
 
-void statistika::on_pushButton_2_clicked()
-{
-     ui->label_3->setVisible(false);
-     ui->pushButton_2->setVisible(false);
-}

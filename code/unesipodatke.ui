@@ -302,19 +302,6 @@ border-radius: 20px;</string>
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Ovde treba uneti podatke o urađenim vezbama sa današnjeg treninga.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Obavezna polja su:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;-broj sklekova&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;-broj trbusnjaka&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;-broj čučnjeva&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;- težina treninga&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon toga možemo pogledati statistiku svake vežbe pojedinačno klikom na dugme &amp;quot;Statistika&amp;quot;.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Klikom na dugme &amp;quot;Nazad&amp;quot; vratićemo se unazad, na polje gde nam se nalaze vežbe.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Klikom na dugme &amp;quot;Izlaz&amp;quot; izaćićemo iz aplikacije.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_7">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>520</y>
-     <width>99</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>izlaz</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

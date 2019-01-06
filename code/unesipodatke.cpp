@@ -28,7 +28,6 @@ unesiPodatke::unesiPodatke(QWidget *parent) :
 
     this->setWindowTitle("Unesite podatke sa treninga");
     ui->label_3->setVisible(false);
-    ui->pushButton_7->setVisible(false);
 }
 
 unesiPodatke::~unesiPodatke()
@@ -169,13 +168,7 @@ void unesiPodatke::on_pushButton_clicked()
 // klik na dugme "Statistika"
 void unesiPodatke::on_pushButton_2_clicked()
 {
-   if(!popunjeniPodaci){
-       QMessageBox::information(this, "Nepopunjeni podaci",
-                   "Da bismo proverili statistiku, moramo prvo uneti podatke sa današnjeg treninga!");
-       return;
-   }
 
-   // sakrivamo pocetni prozor
    hide();
 
    QDesktopWidget dw;
@@ -190,6 +183,12 @@ void unesiPodatke::on_pushButton_2_clicked()
 // klik na dugme za izlaz iz aplikacije
 void unesiPodatke::on_pushButton_3_clicked()
 {
+    if(!popunjeniPodaci){
+        QMessageBox::information(this, "Nepopunjeni podaci",
+                    "Da bismo promenili težinu treninga, moramo prvo uneti podatke sa današnjeg treninga!");
+        return;
+    }
+
     exit(EXIT_SUCCESS);
 }
 
@@ -199,7 +198,6 @@ void unesiPodatke::on_pushButton_5_clicked()
     if(ui->label_3->isHidden() ){
         ui->label_3->setWindowOpacity(0.2);
         ui->label_3->setVisible(true);
-             ui->pushButton_7->setVisible(true);
         ui->label_3->setWordWrap(true);
     } else {
         ui->label_3->setVisible(false);
@@ -234,8 +232,3 @@ void unesiPodatke::on_pushButton_6_clicked()
     mw.showMaximized();
 }
 
-void unesiPodatke::on_pushButton_7_clicked()
-{
-             ui->pushButton_7->setVisible(false);
-                 ui->label_3->setVisible(false);
-}

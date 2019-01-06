@@ -130,7 +130,7 @@ border-width: 2px;
     </rect>
    </property>
    <property name="text">
-    <string>Cucnjevi: </string>
+    <string>Čučnjevi</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
@@ -166,8 +166,8 @@ height: 20;</string>
   <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>330</y>
+     <x>150</x>
+     <y>350</y>
      <width>51</width>
      <height>21</height>
     </rect>
@@ -391,22 +391,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="placeholderText">
     <string>00</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>100</y>
-     <width>771</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font-size:40px;</string>
-   </property>
-   <property name="text">
-    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">

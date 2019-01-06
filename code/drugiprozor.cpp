@@ -74,7 +74,6 @@ drugiprozor::drugiprozor(QWidget *parent) :
       int nivo = fajl.readLine().toInt();
       int danTreninga = fajl.readLine().toInt();
       int indikatorRedaTreninga = fajl.readLine().toInt();
-      qDebug() << danTreninga<<nivo;
 
       fajl.close();
 
@@ -141,7 +140,7 @@ drugiprozor::~drugiprozor(){
 // dugme za start i stop na stoperici
 void drugiprozor::startStopTimer() {
     if(watch->isRunning()) {
-        ui->startStopButton->setText("Restart");
+        ui->startStopButton->setText("Continue");
         watch->pause();
     }
     else {
@@ -195,17 +194,18 @@ void drugiprozor::on_pushButton_clicked(){
 
     QString minuti = ui->minutesText->toPlainText();
 
-    QString Putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/trcanje.txt";
-    QFile trcanje(Putanja);
-    if(!trcanje.open(QIODevice::ReadWrite | QIODevice::Append)){
-        qDebug() << "Cannot open the File trcanje.txt";
-        return;
+    if(minuti != "00"){
+        QString Putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/trcanje.txt";
+        QFile trcanje(Putanja);
+        if(!trcanje.open(QIODevice::ReadWrite | QIODevice::Append)){
+            qDebug() << "Cannot open the File trcanje.txt";
+            return;
+        }
+        QTextStream outtrcanje(&trcanje);
+
+        outtrcanje << minuti << endl;
+        trcanje.close();
     }
-    QTextStream outtrcanje(&trcanje);
-
-    outtrcanje << minuti << endl;
-    trcanje.close();
-
     // sakrivamo trenutni prozor
     hide();
 
