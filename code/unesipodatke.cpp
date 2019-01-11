@@ -21,17 +21,30 @@ unesiPodatke::unesiPodatke(QWidget *parent) :
     ui(new Ui::unesiPodatke)
 {
     ui->setupUi(this);
-    QPixmap pix(":/podaci/slike/pozadina5.jpg");
-    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPixmap bkgnd(":/podaci/slike/pozadina5.jpg");
+
+    // definsiemo velicinu pozadine
+    QDesktopWidget dw;
+    QSize sizeBck;
+    sizeBck.setWidth(dw.width() - 65);
+    sizeBck.setHeight(dw.height());
+
+    bkgnd = bkgnd.scaled(sizeBck, Qt::IgnoreAspectRatio);
     QPalette palette;
-    palette.setBrush(QPalette::Background, pix);
+    palette.setBrush(QPalette::Background, bkgnd);
     this->setPalette(palette);
+
     // dodajemo minimize dugme
     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
 
-
+    // definisemo naslov programa
     this->setWindowTitle("Unesite podatke sa treninga");
     ui->label_3->setVisible(false);
+
+    // definisemo pozadinu za help dugme
+    ui->pushButton_5->setAutoFillBackground(true);
+    ui->pushButton_5->setIcon(QIcon(":/podaci/slike/help.png"));
+    ui->pushButton_5->setIconSize(QSize(30, 30));
 }
 
 unesiPodatke::~unesiPodatke()
@@ -178,7 +191,7 @@ void unesiPodatke::on_pushButton_2_clicked()
    QDesktopWidget dw;
    statistika s;
 
-   s.setModal(true);
+   //s.setModal(true);
    s.setFixedSize(dw.width()-65, dw.height());
    s.exec();
 
@@ -189,7 +202,7 @@ void unesiPodatke::on_pushButton_3_clicked()
 {
     if(!popunjeniPodaci){
         QMessageBox::information(this, "Nepopunjeni podaci",
-                    "Da bismo promenili težinu treninga, moramo prvo uneti podatke sa današnjeg treninga!");
+                    "Da bismo izašli iz aplikacije, moramo prvo uneti podatke sa današnjeg treninga!");
         return;
     }
 
@@ -217,7 +230,7 @@ void unesiPodatke::on_pushButton_4_clicked()
     drugiprozor dp;
 
     dp.setFixedSize(wid.width()-65, wid.height());
-    dp.setModal(true);
+    //dp.setModal(true);
     dp.exec();
 }
 
@@ -225,14 +238,16 @@ void unesiPodatke::on_pushButton_4_clicked()
 // menjanje tezine treninga
 void unesiPodatke::on_pushButton_6_clicked()
 {
+
     if(!popunjeniPodaci){
         QMessageBox::information(this, "Nepopunjeni podaci",
                     "Da bismo promenili težinu treninga, moramo prvo uneti podatke sa današnjeg treninga!");
         return;
     }
 
+
     // dodati za vracanje unazad i promenu tezine treninga
     MainWindow mw;
-    mw.showMaximized();
+    mw.show();
 }
 

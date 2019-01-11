@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1109</width>
-    <height>707</height>
+    <width>1229</width>
+    <height>751</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,7 +31,7 @@
 font-size:30px;</string>
     </property>
     <property name="text">
-     <string>                      DOBRODOŠLI</string>
+     <string>Dobrodošli!</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -47,7 +47,7 @@ font-size:30px;</string>
      <string notr="true">font-size:30px;</string>
     </property>
     <property name="text">
-     <string>IZABERITE TEŽINU TRENINGA:</string>
+     <string>Izaberite težinu treninga:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -67,7 +67,7 @@ border-width: 2px;
 border-radius: 20px;</string>
     </property>
     <property name="text">
-     <string>ZAPOCNI TRENING</string>
+     <string>Započni trening</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -87,7 +87,7 @@ border-width: 2px;
 border-radius: 25px;</string>
     </property>
     <property name="text">
-     <string>Pocetnik</string>
+     <string>Početnik</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -133,28 +133,28 @@ border-radius: 25px;background-color:aqua;</string>
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>1020</x>
-      <y>0</y>
-      <width>51</width>
+      <x>1150</x>
+      <y>10</y>
+      <width>31</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">height: 25px;
-width: 25px;
+     <string notr="true">height: 30px;
+width: 30px;
 background-color: #bbb;
 </string>
     </property>
     <property name="text">
-     <string>HELP</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>-130</x>
-      <y>140</y>
-      <width>1061</width>
+      <x>100</x>
+      <y>120</y>
+      <width>891</width>
       <height>421</height>
      </rect>
     </property>
@@ -164,7 +164,7 @@ background-color:#ccc;
 border-radius: 20px;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Ovde treba izabrati težinu treninga. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Početnik: osoba koja dugo nije bila aktivna. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Prosek: osoba koja je umereno aktivna.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Profesionalac: osoba koja aktivno trenira. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon odabira težine treninga, kliknite na &amp;quot;Započni trening&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600; font-style:italic;&quot;&gt;Ovde treba izabrati težinu treninga. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Početnik&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;: osoba koja dugo nije bila aktivna. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Prosek&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;: osoba koja je umereno aktivna.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Profesionalac&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;: osoba koja aktivno trenira. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon odabira težine treninga, kliknite na &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Započni trening&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <zorder>label_3</zorder>
@@ -181,7 +181,7 @@ border-radius: 20px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1109</width>
+     <width>1229</width>
      <height>22</height>
     </rect>
    </property>

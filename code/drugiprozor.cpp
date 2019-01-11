@@ -9,6 +9,7 @@
 #include <QMovie>
 #include <QDesktopWidget>
 #include <QPixmap>
+#include <QPalette>
 
 #include "stopwatch.h"
 #include "drugiprozor.h"
@@ -21,77 +22,89 @@ drugiprozor::drugiprozor(QWidget *parent) :
     watch(new Stopwatch()){
 
     ui->setupUi(this);
-    QPixmap pix(":/podaci/slike/pozadina3.jpg");
-    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+
+    // definisemo putanju do pozadine
+    QPixmap bkgnd(":/podaci/slike/pozadina3.jpg");
+    // definsiemo velicinu pozadine
+    QSize sizeBck;
+    QDesktopWidget dw;
+    sizeBck.setWidth(dw.width() - 65);
+    sizeBck.setHeight(dw.height());
+
+    bkgnd = bkgnd.scaled(sizeBck, Qt::IgnoreAspectRatio);
     QPalette palette;
-    palette.setBrush(QPalette::Background, pix);
+    palette.setBrush(QPalette::Background, bkgnd);
     this->setPalette(palette);
-    setStyleSheet( "background-repeat:no-repeat;" );
+
+    // definisemo akcije za stopericu
     QObject::connect(ui->startStopButton, &QPushButton::clicked,
                      this, &drugiprozor::startStopTimer);
     QObject::connect(ui->resetButton, &QPushButton::clicked,
                      this, &drugiprozor::resetTimer);
-     // dodajemo minimize dugme
-     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
-     //tajmer za stopericu
-     QTimer *timer = new QTimer(this);
-     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
-     timer->start(10);
-      // prvi gif za cucnjeve
-      QMovie *movie1 = new QMovie(":/podaci/gifovi/cucnjevi.gif");
-      QSize size(233, 151);
-      movie1->setScaledSize(size);
-      movie1->setSpeed(100);
-      if (!movie1->isValid())
-      {
-          qDebug() << ".gif file is not valid!" ;
-          return;
-      }
-      ui->label_9->setMovie(movie1);
-      movie1->start();
 
-      // drugi gif za trbusnjake
-      QMovie *movie2 = new QMovie(":/podaci/gifovi/trbusnjaci.gif");
-      movie2->setScaledSize(size);
-      if (!movie2->isValid())
-      {
-          qDebug() << ".gif file is not valid!" ;
-          return;
-      }
-      ui->label_8->setMovie(movie2);
-      movie2->start();
+    // dodajemo minimize dugme
+    this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
+    //tajmer za stopericu
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
+    timer->start(10);
 
-      // treci gif za sklekove
-      QMovie *movie3 = new QMovie(":/podaci/gifovi/sklekovi.gif");
-      movie3->setScaledSize(size);
-      if (!movie3->isValid())
-      {
-          qDebug() << ".gif file is not valid!" ;
-          return;
-      }
-      ui->label_5->setMovie(movie3);
-      movie3->start();
-      // citamo podatke iz fajla i upisujemo u deo za treninge
-      QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
-      QFile fajl(putanja);
-      if(!fajl.open(QIODevice::ReadOnly)){
-          qDebug() << "Cannot open the File nivo.txt";
-          return;
-      }
-      int nivo = fajl.readLine().toInt();
-      int danTreninga = fajl.readLine().toInt();
-      int indikatorRedaTreninga = fajl.readLine().toInt();
+    // prvi gif za cucnjeve
+    QMovie *movie1 = new QMovie(":/podaci/gifovi/cucnjevi.gif");
+    QSize size(233, 151);
+    movie1->setScaledSize(size);
+    movie1->setSpeed(100);
+    if (!movie1->isValid())
+    {
+        qDebug() << ".gif file is not valid!" ;
+        return;
+    }
+    ui->label_9->setMovie(movie1);
+    movie1->start();
 
-      fajl.close();
+    // drugi gif za trbusnjake
+    QMovie *movie2 = new QMovie(":/podaci/gifovi/trbusnjaci.gif");
+    movie2->setScaledSize(size);
+    if (!movie2->isValid())
+    {
+        qDebug() << ".gif file is not valid!" ;
+        return;
+    }
+    ui->label_8->setMovie(movie2);
+    movie2->start();
 
-      // gledamo da li korisnik zeli da ima slobodan dan
-      if((danTreninga==0) || ((nivo==1) && (nivo%4!=0)))
-                ui->pushButton_2->setVisible(false);
-            if((nivo==2) && (nivo%5!=0))
-                ui->pushButton_2->setVisible(false);
-            if((nivo==3) && (nivo%6!=0))
-                ui->pushButton_2->setVisible(false);
-     // u zavisnosti od nivoa, otvaramo odgovarajuci fajl sa vezbama
+    // treci gif za sklekove
+    QMovie *movie3 = new QMovie(":/podaci/gifovi/sklekovi.gif");
+    movie3->setScaledSize(size);
+    if (!movie3->isValid())
+    {
+        qDebug() << ".gif file is not valid!" ;
+        return;
+    }
+    ui->label_5->setMovie(movie3);
+    movie3->start();
+    // citamo podatke iz fajla i upisujemo u deo za treninge
+    QString putanja = QDir::currentPath() + "/podaci/tekstualniFajlovi/nivo.txt";
+    QFile fajl(putanja);
+    if(!fajl.open(QIODevice::ReadOnly)){
+        qDebug() << "Cannot open the File nivo.txt";
+        return;
+    }
+    int nivo = fajl.readLine().toInt();
+    int danTreninga = fajl.readLine().toInt();
+    int indikatorRedaTreninga = fajl.readLine().toInt();
+
+    fajl.close();
+
+    // gledamo da li korisnik zeli da ima slobodan dan
+    if((danTreninga==0) || ((nivo==1) && (nivo%4!=0)))
+        ui->pushButton_2->setVisible(false);
+    if((nivo==2) && (nivo%5!=0))
+        ui->pushButton_2->setVisible(false);
+    if((nivo==3) && (nivo%6!=0))
+        ui->pushButton_2->setVisible(false);
+
+    // u zavisnosti od nivoa, otvaramo odgovarajuci fajl sa vezbama
      QString s;
      if(nivo == 1){
          s = "Lako";
@@ -220,7 +233,7 @@ void drugiprozor::on_pushButton_clicked(){
     QDesktopWidget dw;
     unesiPodatke up;
 
-    up.setModal(true);
+    //up.setModal(true);
     up.setFixedSize(dw.width()-65, dw.height());
     up.exec();
 }

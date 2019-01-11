@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1101</width>
-    <height>730</height>
+    <width>1422</width>
+    <height>682</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>720</x>
-     <y>570</y>
+     <x>740</x>
+     <y>610</y>
      <width>341</width>
      <height>61</height>
     </rect>
@@ -36,8 +36,8 @@ border-radius: 20px;</string>
   <widget class="QTextEdit" name="textEdit_3">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>280</y>
+     <x>30</x>
+     <y>380</y>
      <width>61</width>
      <height>51</height>
     </rect>
@@ -46,110 +46,166 @@ border-radius: 20px;</string>
     <string notr="true">border-style: solid;
 border-color: black;
 border-width: 2px;
-border-radius: 20px;</string>
+border-radius: 20px;
+font-size:20px;
+text-align:center;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>60</y>
-     <width>251</width>
+     <width>291</width>
      <height>61</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size : 20px;</string>
+    <string notr="true">font-size : 25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>UNESI BROJ URAĐENIH: </string>
+    <string>Unesi broj urađenih:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>156</y>
-     <width>101</width>
-     <height>21</height>
+     <x>110</x>
+     <y>146</y>
+     <width>121</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>TRBUŠNI</string>
+    <string>Trbušni</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>226</y>
-     <width>91</width>
+     <x>110</x>
+     <y>276</y>
+     <width>131</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>SKLEKOVI</string>
+    <string>Sklekovi</string>
    </property>
   </widget>
   <widget class="QRadioButton" name="radioButton_2">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>220</y>
-     <width>151</width>
+     <x>770</x>
+     <y>270</y>
+     <width>181</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>      SREDNJE</string>
+    <string>Srednje</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>297</y>
-     <width>101</width>
-     <height>20</height>
+     <x>110</x>
+     <y>386</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>ČUČNJEVI</string>
+    <string>Čučnjevi</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>760</x>
      <y>50</y>
-     <width>201</width>
+     <width>241</width>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>OCENA TRENINGA:</string>
+    <string>Ocena treninga:</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="textEdit_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>210</y>
+     <x>30</x>
+     <y>260</y>
      <width>61</width>
      <height>51</height>
     </rect>
@@ -158,30 +214,41 @@ border-radius: 20px;</string>
     <string notr="true">border-style: solid;
 border-color: black;
 border-width: 2px;
-border-radius: 20px;</string>
+border-radius: 20px;
+font-size:20px;
+text-align:center;</string>
    </property>
   </widget>
   <widget class="QRadioButton" name="radioButton_3">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>290</y>
+     <x>770</x>
+     <y>380</y>
      <width>151</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>      TESKO</string>
+    <string>Teško</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>150</y>
+     <x>1050</x>
+     <y>110</y>
      <width>171</width>
      <height>61</height>
     </rect>
@@ -194,29 +261,38 @@ border-width: 2px;
 border-radius: 20px;</string>
    </property>
    <property name="text">
-    <string>Posalji rezultate</string>
+    <string>Pošalji rezultate</string>
    </property>
   </widget>
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>770</x>
      <y>150</y>
-     <width>117</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>99</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:20px;</string>
+    <string notr="true">font-size:25px;
+color:#FF851B;
+font-weight: 1000;</string>
    </property>
    <property name="text">
-    <string>      LAKO</string>
+    <string>Lako</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>140</y>
      <width>61</width>
      <height>51</height>
@@ -226,14 +302,16 @@ border-radius: 20px;</string>
     <string notr="true">border-style: solid;
 border-color: black;
 border-width: 2px;
-border-radius: 20px;</string>
+border-radius: 20px;
+font-size:20px;
+text-align:center;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>570</y>
+     <x>1050</x>
+     <y>460</y>
      <width>181</width>
      <height>61</height>
     </rect>
@@ -252,27 +330,25 @@ border-radius: 20px;</string>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>0</y>
-     <width>81</width>
+     <x>1260</x>
+     <y>10</y>
+     <width>31</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">height: 25px;
-width: 25px;
-background-color: #bbb;
+    <string notr="true">background-color: #bbb;
 </string>
    </property>
    <property name="text">
-    <string>HELP</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>570</y>
+     <x>180</x>
+     <y>610</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -291,8 +367,8 @@ border-radius: 20px;</string>
   <widget class="QPushButton" name="pushButton_6">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>260</y>
+     <x>1050</x>
+     <y>270</y>
      <width>171</width>
      <height>61</height>
     </rect>
@@ -305,25 +381,30 @@ border-width: 2px;
 border-radius: 20px;</string>
    </property>
    <property name="text">
-    <string>Promeni tezinu</string>
+    <string>Promeni težinu</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>20</x>
+     <y>110</y>
      <width>891</width>
-     <height>541</height>
+     <height>601</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size:5px;
+    <string notr="true">font-size:10px;
 background-color:#ccc;
-border-radius: 20px;</string>
+border-radius: 10px;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Ovde treba uneti podatke o urađenim vezbama sa današnjeg treninga.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Obavezna polja su:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;-broj sklekova&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;-broj trbusnjaka&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;-broj čučnjeva&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;- težina treninga&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon toga možemo pogledati statistiku svake vežbe pojedinačno klikom na dugme &amp;quot;Statistika&amp;quot;.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Klikom na dugme &amp;quot;Nazad&amp;quot; vratićemo se unazad, na polje gde nam se nalaze vežbe.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Klikom na dugme &amp;quot;Izlaz&amp;quot; izaćićemo iz aplikacije.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; font-style:italic;&quot;&gt;Ovde treba uneti podatke o urađenim vezbama sa današnjeg treninga.&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; font-style:italic;&quot;&gt;Da uklonite ovaj prozor, kliknite ponovo na &amp;quot;help&amp;quot; dugme(dugme sa znakom &amp;quot;?&amp;quot;).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Obavezna polja su:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;-broj sklekova&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;-broj trbusnjaka&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;-broj čučnjeva&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;-težina treninga:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;	a) &lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;lako&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; - trening nam je bio jako lak&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;	b) &lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;srednje&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; - odradili smo ceo trening&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;	c) &lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;teško&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; - trening je bio pretežak za moje mogućnosti&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;br/&gt;Nakon toga možemo pogledati statistiku svake vežbe pojedinačno klikom na dugme &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Statistika&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;.&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Klikom na dugme &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Nazad&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot; vratićemo se unazad, na polje gde nam se nalaze vežbe.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Klikom na dugme &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Izlaz&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot; izaćićemo iz aplikacije.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

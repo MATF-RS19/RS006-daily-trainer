@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
     QDesktopWidget dw;
     if(val > 0){
         dp.setFixedSize(dw.width()-65, dw.height());
-        dp.setModal(true);
+        //dp.setModal(true);
         dp.exec();
     } else {
         w.setFixedSize(dw.width()-65, dw.height());

@@ -737,11 +737,10 @@ qrc_resource.cpp: resource.qrc \
 		podaci/gifovi/cucnjevi.gif \
 		podaci/gifovi/trbusnjaci.gif \
 		podaci/gifovi/sklekovi.gif \
-		podaci/slike/images.jpeg \
+		podaci/slike/help.png \
 		podaci/slike/pozadina1.jpeg \
 		podaci/slike/pozadina5.jpg \
-		podaci/slike/pozadina4.jpeg \
-		podaci/slike/pozadina2.png \
+		podaci/slike/statistika.jpg \
 		podaci/slike/pozadina3.jpg
 	/home/djordje/Qt/5.12.0/gcc_64/bin/rcc -name resource resource.qrc -o qrc_resource.cpp
 
@@ -2662,6 +2661,7 @@ drugiprozor.o: drugiprozor.cpp ../../../Qt/5.12.0/gcc_64/include/QtCore/QDebug \
 		../../../Qt/5.12.0/gcc_64/include/QtWidgets/QDesktopWidget \
 		../../../Qt/5.12.0/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt/5.12.0/gcc_64/include/QtGui/QPixmap \
+		../../../Qt/5.12.0/gcc_64/include/QtGui/QPalette \
 		stopwatch.h \
 		../../../Qt/5.12.0/gcc_64/include/QtCore/QAbstractItemModel \
 		../../../Qt/5.12.0/gcc_64/include/QtCore/qabstractitemmodel.h \

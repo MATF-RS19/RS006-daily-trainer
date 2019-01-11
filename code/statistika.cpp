@@ -15,7 +15,6 @@ statistika::statistika(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::statistika){
     ui->setupUi(this);
-    setStyleSheet( "background-image:url(:/podaci/slike/images.jpeg);" );
     statistika::makePlot(QString::fromStdString("trbusnjaci.txt"),7);
 
     // dodajemo minimize dugme
@@ -24,6 +23,19 @@ statistika::statistika(QWidget *parent) :
     this->setWindowTitle("Statistika");
     ui->label_3->setVisible(false);    
     ui->radioButton_4->setChecked(true);
+
+    // definisemo pozadinu za help dugme
+    ui->pushButton_5->setAutoFillBackground(true);
+    ui->pushButton_5->setIcon(QIcon(":/podaci/slike/help.png"));
+    ui->pushButton_5->setIconSize(QSize(30, 30));
+
+    // definisemo sliku pozadine
+    // definisemo pozadinu
+    QPixmap pix(":/podaci/slike/statistika.jpg");
+    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, pix);
+    this->setPalette(palette);
 }
 
 statistika::~statistika(){
@@ -118,7 +130,7 @@ void statistika::on_pushButton_clicked()
     QDesktopWidget dw;
     unesiPodatke up;
 
-    up.setModal(true);
+   // up.setModal(true);
     up.setFixedSize(dw.width()-65, dw.height());
     up.exec();
 }

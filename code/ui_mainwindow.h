@@ -41,7 +41,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1109, 707);
+        MainWindow->resize(1229, 751);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color:#aaa;"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
@@ -88,14 +88,14 @@ public:
 "border-radius: 25px;background-color:aqua;"));
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(1020, 0, 51, 31));
-        pushButton_5->setStyleSheet(QString::fromUtf8("height: 25px;\n"
-"width: 25px;\n"
+        pushButton_5->setGeometry(QRect(1150, 10, 31, 31));
+        pushButton_5->setStyleSheet(QString::fromUtf8("height: 30px;\n"
+"width: 30px;\n"
 "background-color: #bbb;\n"
 ""));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(-130, 140, 1061, 421));
+        label_3->setGeometry(QRect(100, 120, 891, 421));
         label_3->setStyleSheet(QString::fromUtf8("font-size:30px;\n"
 "background-color:#ccc;\n"
 "border-radius: 20px;"));
@@ -110,7 +110,7 @@ public:
         pushButton_5->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1109, 22));
+        menuBar->setGeometry(QRect(0, 0, 1229, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -127,14 +127,14 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QApplication::translate("MainWindow", "                      DOBRODO\305\240LI", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "IZABERITE TE\305\275INU TRENINGA:", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "ZAPOCNI TRENING", nullptr));
-        pushButton_2->setText(QApplication::translate("MainWindow", "Pocetnik", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Dobrodo\305\241li!", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Izaberite te\305\276inu treninga:", nullptr));
+        pushButton->setText(QApplication::translate("MainWindow", "Zapo\304\215ni trening", nullptr));
+        pushButton_2->setText(QApplication::translate("MainWindow", "Po\304\215etnik", nullptr));
         pushButton_3->setText(QApplication::translate("MainWindow", "Prosek", nullptr));
         pushButton_4->setText(QApplication::translate("MainWindow", "Profesionalac", nullptr));
-        pushButton_5->setText(QApplication::translate("MainWindow", "HELP", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:23pt;\">Ovde treba izabrati te\305\276inu treninga. </span><br/></p><p><span style=\" font-size:23pt;\">Po\304\215etnik: osoba koja dugo nije bila aktivna. </span></p><p><span style=\" font-size:23pt;\">Prosek: osoba koja je umereno aktivna.</span></p><p><span style=\" font-size:23pt;\">Profesionalac: osoba koja aktivno trenira. </span><br/></p><p><span style=\" font-size:23pt;\">Nakon odabira te\305\276ine treninga, kliknite na &quot;Zapo\304\215ni trening&quot;.</span></p></body></html>", nullptr));
+        pushButton_5->setText(QString());
+        label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:23pt; font-weight:600; font-style:italic;\">Ovde treba izabrati te\305\276inu treninga. </span><br/></p><p><span style=\" font-size:23pt; font-weight:600;\">Po\304\215etnik</span><span style=\" font-size:23pt;\">: osoba koja dugo nije bila aktivna. </span></p><p><span style=\" font-size:23pt; font-weight:600;\">Prosek</span><span style=\" font-size:23pt;\">: osoba koja je umereno aktivna.</span></p><p><span style=\" font-size:23pt; font-weight:600;\">Profesionalac</span><span style=\" font-size:23pt;\">: osoba koja aktivno trenira. </span><br/></p><p><span style=\" font-size:23pt;\">Nakon odabira te\305\276ine treninga, kliknite na &quot;</span><span style=\" font-size:23pt; font-weight:600;\">Zapo\304\215ni trening</span><span style=\" font-size:23pt;\">&quot;.</span></p></body></html>", nullptr));
     } // retranslateUi
 
 };

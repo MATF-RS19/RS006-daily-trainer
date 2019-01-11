@@ -22,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow){
     ui->setupUi(this);
+
+    // definisemo pozadinu
     QPixmap pix(":/podaci/slike/pozadina1.jpeg");
     pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
@@ -32,8 +34,14 @@ MainWindow::MainWindow(QWidget *parent) :
     // dodajemo minimize dugme
     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
 
+    // definisemo ime programa
     this->setWindowTitle("Glavni program");
     ui->label_3->setVisible(false);
+
+    // definisemo pozadinu za help dugme
+    ui->pushButton_5->setAutoFillBackground(true);
+    ui->pushButton_5->setIcon(QIcon(":/podaci/slike/help.png"));
+    ui->pushButton_5->setIconSize(QSize(30,30));
 }
 
 MainWindow::~MainWindow(){
@@ -67,7 +75,7 @@ void MainWindow::on_pushButton_clicked(){
 
     drugiprozor dp;
     dp.setFixedSize(dw.width()-65, dw.height());
-    dp.setModal(true);
+   // dp.setModal(true);
     dp.exec();
 }
 
