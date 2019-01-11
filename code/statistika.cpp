@@ -119,7 +119,7 @@ void statistika::on_pushButton_clicked()
     unesiPodatke up;
 
     up.setModal(true);
-    up.setFixedSize(dw.width(), dw.height());
+    up.setFixedSize(dw.width()-65, dw.height());
     up.exec();
 }
 

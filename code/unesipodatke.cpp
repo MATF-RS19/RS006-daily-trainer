@@ -21,7 +21,11 @@ unesiPodatke::unesiPodatke(QWidget *parent) :
     ui(new Ui::unesiPodatke)
 {
     ui->setupUi(this);
-
+    QPixmap pix(":/podaci/slike/pozadina5.jpg");
+    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, pix);
+    this->setPalette(palette);
     // dodajemo minimize dugme
     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
 
@@ -175,7 +179,7 @@ void unesiPodatke::on_pushButton_2_clicked()
    statistika s;
 
    s.setModal(true);
-   s.setFixedSize(dw.width(), dw.height());
+   s.setFixedSize(dw.width()-65, dw.height());
    s.exec();
 
 }
@@ -212,7 +216,7 @@ void unesiPodatke::on_pushButton_4_clicked()
     QDesktopWidget wid;
     drugiprozor dp;
 
-    dp.setFixedSize(wid.width(), wid.height());
+    dp.setFixedSize(wid.width()-65, wid.height());
     dp.setModal(true);
     dp.exec();
 }

@@ -8,6 +8,7 @@
 #include <QTimer>
 #include <QMovie>
 #include <QDesktopWidget>
+#include <QPixmap>
 
 #include "stopwatch.h"
 #include "drugiprozor.h"
@@ -20,6 +21,12 @@ drugiprozor::drugiprozor(QWidget *parent) :
     watch(new Stopwatch()){
 
     ui->setupUi(this);
+    QPixmap pix(":/podaci/slike/pozadina3.jpg");
+    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, pix);
+    this->setPalette(palette);
+    setStyleSheet( "background-repeat:no-repeat;" );
     QObject::connect(ui->startStopButton, &QPushButton::clicked,
                      this, &drugiprozor::startStopTimer);
     QObject::connect(ui->resetButton, &QPushButton::clicked,
@@ -32,7 +39,7 @@ drugiprozor::drugiprozor(QWidget *parent) :
      timer->start(10);
       // prvi gif za cucnjeve
       QMovie *movie1 = new QMovie(":/podaci/gifovi/cucnjevi.gif");
-      QSize size(150, 100);
+      QSize size(233, 151);
       movie1->setScaledSize(size);
       movie1->setSpeed(100);
       if (!movie1->isValid())
@@ -214,7 +221,7 @@ void drugiprozor::on_pushButton_clicked(){
     unesiPodatke up;
 
     up.setModal(true);
-    up.setFixedSize(dw.width(), dw.height());
+    up.setFixedSize(dw.width()-65, dw.height());
     up.exec();
 }
 

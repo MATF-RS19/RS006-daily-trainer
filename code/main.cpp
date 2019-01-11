@@ -30,11 +30,11 @@ int main(int argc, char *argv[]){
     // tezinu treninga i odmah idemo na drugi prozor
     QDesktopWidget dw;
     if(val > 0){
-        dp.setFixedSize(dw.width(), dw.height());
+        dp.setFixedSize(dw.width()-65, dw.height());
         dp.setModal(true);
         dp.exec();
     } else {
-        w.setFixedSize(dw.width(), dw.height());
+        w.setFixedSize(dw.width()-65, dw.height());
         w.showMaximized();
     }
     return a.exec();

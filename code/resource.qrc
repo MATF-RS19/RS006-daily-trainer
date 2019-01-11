@@ -4,5 +4,10 @@
         <file>podaci/gifovi/sklekovi.gif</file>
         <file>podaci/gifovi/trbusnjaci.gif</file>
         <file>podaci/slike/images.jpeg</file>
+        <file>podaci/slike/pozadina2.png</file>
+        <file>podaci/slike/pozadina1.jpeg</file>
+        <file>podaci/slike/pozadina3.jpg</file>
+        <file>podaci/slike/pozadina4.jpeg</file>
+        <file>podaci/slike/pozadina5.jpg</file>
     </qresource>
 </RCC>

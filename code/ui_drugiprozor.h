@@ -48,10 +48,9 @@ public:
     {
         if (drugiprozor->objectName().isEmpty())
             drugiprozor->setObjectName(QString::fromUtf8("drugiprozor"));
-        drugiprozor->resize(1112, 730);
+        drugiprozor->resize(1101, 730);
         drugiprozor->setMaximumSize(QSize(16777215, 16777215));
-        drugiprozor->setStyleSheet(QString::fromUtf8("width: 100%;\n"
-"height: 100%;"));
+        drugiprozor->setStyleSheet(QString::fromUtf8("background-repeat: no-repeat;"));
         lcdNumber = new QLCDNumber(drugiprozor);
         lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
         lcdNumber->setGeometry(QRect(60, 30, 251, 61));
@@ -61,52 +60,63 @@ public:
 ""));
         label_2 = new QLabel(drugiprozor);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(30, 290, 131, 41));
+        label_2->setGeometry(QRect(50, 210, 351, 41));
+        label_2->setStyleSheet(QString::fromUtf8("font-size: 40px;"));
         label_4 = new QLabel(drugiprozor);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(50, 350, 81, 21));
+        label_4->setGeometry(QRect(50, 290, 121, 81));
+        label_4->setStyleSheet(QString::fromUtf8("font-size: 30px;"));
         label_3 = new QLabel(drugiprozor);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(70, 50, 111, 31));
         label_5 = new QLabel(drugiprozor);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(50, 440, 141, 81));
+        label_5->setGeometry(QRect(50, 400, 233, 151));
         pushButton = new QPushButton(drugiprozor);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(520, 640, 301, 51));
-        pushButton->setStyleSheet(QString::fromUtf8("background-color:#ff3333;"));
+        pushButton->setGeometry(QRect(430, 640, 301, 51));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color:#ff3333;\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 2px;\n"
+"border-radius: 25px;"));
         label_6 = new QLabel(drugiprozor);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(530, 350, 81, 21));
+        label_6->setGeometry(QRect(433, 290, 121, 81));
+        label_6->setStyleSheet(QString::fromUtf8("font-size: 30px;"));
         label_7 = new QLabel(drugiprozor);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(950, 340, 81, 16));
+        label_7->setGeometry(QRect(817, 290, 121, 81));
+        label_7->setStyleSheet(QString::fromUtf8("font-size: 30px;"));
         label_8 = new QLabel(drugiprozor);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(530, 400, 141, 71));
+        label_8->setGeometry(QRect(433, 400, 234, 151));
         label_9 = new QLabel(drugiprozor);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(950, 410, 121, 111));
+        label_9->setGeometry(QRect(817, 400, 233, 151));
         label_9->setStyleSheet(QString::fromUtf8("width:50;\n"
 "height: 20;"));
         label_11 = new QLabel(drugiprozor);
         label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setGeometry(QRect(150, 350, 51, 21));
+        label_11->setGeometry(QRect(180, 290, 51, 81));
+        label_11->setStyleSheet(QString::fromUtf8("font-size: 30px;"));
         label_12 = new QLabel(drugiprozor);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(630, 350, 51, 21));
+        label_12->setGeometry(QRect(563, 290, 51, 81));
+        label_12->setStyleSheet(QString::fromUtf8("font-size: 30px;"));
         label_13 = new QLabel(drugiprozor);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(1020, 340, 51, 21));
+        label_13->setGeometry(QRect(950, 290, 51, 81));
+        label_13->setStyleSheet(QString::fromUtf8("font-size: 30px;"));
         label_10 = new QLabel(drugiprozor);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setGeometry(QRect(860, 20, 21, 51));
+        label_10->setGeometry(QRect(900, 20, 21, 51));
         QFont font;
         font.setPointSize(36);
         label_10->setFont(font);
         hundredthsText = new QTextEdit(drugiprozor);
         hundredthsText->setObjectName(QString::fromUtf8("hundredthsText"));
-        hundredthsText->setGeometry(QRect(960, 20, 71, 61));
+        hundredthsText->setGeometry(QRect(1030, 20, 71, 61));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -123,7 +133,7 @@ public:
         hundredthsText->setCursorWidth(1);
         minutesText = new QTextEdit(drugiprozor);
         minutesText->setObjectName(QString::fromUtf8("minutesText"));
-        minutesText->setGeometry(QRect(780, 20, 81, 61));
+        minutesText->setGeometry(QRect(810, 20, 81, 61));
         minutesText->setFont(font);
         minutesText->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         minutesText->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -131,17 +141,27 @@ public:
         minutesText->setAcceptRichText(false);
         resetButton = new QPushButton(drugiprozor);
         resetButton->setObjectName(QString::fromUtf8("resetButton"));
-        resetButton->setGeometry(QRect(910, 100, 75, 23));
+        resetButton->setGeometry(QRect(990, 100, 75, 23));
+        resetButton->setStyleSheet(QString::fromUtf8("background-color :rgb(239, 41, 41);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 2px;\n"
+"border-radius: 20px;"));
         startStopButton = new QPushButton(drugiprozor);
         startStopButton->setObjectName(QString::fromUtf8("startStopButton"));
-        startStopButton->setGeometry(QRect(820, 100, 75, 23));
+        startStopButton->setGeometry(QRect(880, 100, 75, 23));
+        startStopButton->setStyleSheet(QString::fromUtf8("background-color :rgb(115, 210, 22);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 2px;\n"
+"border-radius: 20px;"));
         label_14 = new QLabel(drugiprozor);
         label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setGeometry(QRect(950, 20, 21, 51));
+        label_14->setGeometry(QRect(1010, 20, 21, 51));
         label_14->setFont(font);
         secondsText = new QTextEdit(drugiprozor);
         secondsText->setObjectName(QString::fromUtf8("secondsText"));
-        secondsText->setGeometry(QRect(870, 20, 81, 61));
+        secondsText->setGeometry(QRect(920, 20, 81, 61));
         secondsText->setFont(font);
         secondsText->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         secondsText->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -149,7 +169,12 @@ public:
         secondsText->setAcceptRichText(false);
         pushButton_2 = new QPushButton(drugiprozor);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(930, 660, 99, 27));
+        pushButton_2->setGeometry(QRect(918, 646, 131, 41));
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color :rgb(252, 233, 79);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 2px;\n"
+"border-radius: 20px;"));
 
         retranslateUi(drugiprozor);
 
@@ -165,7 +190,7 @@ public:
         label_5->setText(QString());
         pushButton->setText(QApplication::translate("drugiprozor", "KRAJ TRENINGA", nullptr));
         label_6->setText(QApplication::translate("drugiprozor", "Trbu\305\241ni: ", nullptr));
-        label_7->setText(QApplication::translate("drugiprozor", "\304\214u\304\215njevi", nullptr));
+        label_7->setText(QApplication::translate("drugiprozor", "\304\214u\304\215njevi:", nullptr));
         label_8->setText(QString());
         label_9->setText(QString());
         label_11->setText(QApplication::translate("drugiprozor", "10", nullptr));

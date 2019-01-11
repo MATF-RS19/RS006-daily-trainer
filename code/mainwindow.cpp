@@ -22,6 +22,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow){
     ui->setupUi(this);
+    QPixmap pix(":/podaci/slike/pozadina1.jpeg");
+    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, pix);
+    this->setPalette(palette);
+
 
     // dodajemo minimize dugme
     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);
@@ -60,7 +66,7 @@ void MainWindow::on_pushButton_clicked(){
     QDesktopWidget dw;
 
     drugiprozor dp;
-    dp.setFixedSize(dw.width(), dw.height());
+    dp.setFixedSize(dw.width()-65, dw.height());
     dp.setModal(true);
     dp.exec();
 }

@@ -20,7 +20,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>370</x>
       <y>10</y>
       <width>431</width>
       <height>41</height>
@@ -37,7 +37,7 @@ font-size:30px;</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>40</x>
       <y>90</y>
       <width>431</width>
       <height>41</height>
@@ -73,14 +73,18 @@ border-radius: 20px;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>180</y>
+      <x>40</x>
+      <y>200</y>
       <width>211</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:aqua;</string>
+     <string notr="true">background-color:aqua;
+border-style: solid;
+border-color: black;
+border-width: 2px;
+border-radius: 25px;</string>
     </property>
     <property name="text">
      <string>Pocetnik</string>
@@ -89,14 +93,18 @@ border-radius: 20px;</string>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>180</y>
+      <x>430</x>
+      <y>200</y>
       <width>211</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:aqua;</string>
+     <string notr="true">background-color:aqua;
+border-style: solid;
+border-color: black;
+border-width: 2px;
+border-radius: 25px;</string>
     </property>
     <property name="text">
      <string>Prosek</string>
@@ -105,14 +113,18 @@ border-radius: 20px;</string>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>170</y>
-      <width>181</width>
+      <x>850</x>
+      <y>200</y>
+      <width>211</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:aqua;</string>
+     <string notr="true">background-color:aqua;
+border-style: solid;
+border-color: black;
+border-width: 2px;
+border-radius: 25px;background-color:aqua;</string>
     </property>
     <property name="text">
      <string>Profesionalac</string>
@@ -121,8 +133,8 @@ border-radius: 20px;</string>
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>20</y>
+      <x>1020</x>
+      <y>0</y>
       <width>51</width>
       <height>31</height>
      </rect>
@@ -134,14 +146,14 @@ background-color: #bbb;
 </string>
     </property>
     <property name="text">
-     <string>?</string>
+     <string>HELP</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>150</y>
+      <x>-130</x>
+      <y>140</y>
       <width>1061</width>
       <height>421</height>
      </rect>
@@ -155,6 +167,14 @@ border-radius: 20px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Ovde treba izabrati težinu treninga. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Početnik: osoba koja dugo nije bila aktivna. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Prosek: osoba koja je umereno aktivna.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Profesionalac: osoba koja aktivno trenira. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon odabira težine treninga, kliknite na &amp;quot;Započni trening&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>pushButton_5</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
