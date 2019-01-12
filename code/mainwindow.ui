@@ -137,7 +137,7 @@ font-size:18px;</string>
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>1160</x>
+      <x>1200</x>
       <y>0</y>
       <width>31</width>
       <height>31</height>
@@ -146,7 +146,7 @@ font-size:18px;</string>
     <property name="styleSheet">
      <string notr="true">height: 30px;
 width: 30px;
-background-color: #bbb;
+background-color: rgb(114, 159, 207);
 font-size:16px;
 </string>
     </property>
@@ -172,14 +172,6 @@ border-radius: 20px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600; font-style:italic;&quot;&gt;Ovde treba izabrati težinu treninga. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Početnik&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;: osoba koja dugo nije bila aktivna. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Prosek&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;: osoba koja je umereno aktivna.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Profesionalac&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;: osoba koja aktivno trenira. &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;Nakon odabira težine treninga, kliknite na &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:23pt; font-weight:600;&quot;&gt;Započni trening&lt;/span&gt;&lt;span style=&quot; font-size:23pt;&quot;&gt;&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <zorder>label_3</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>pushButton_4</zorder>
-   <zorder>pushButton_5</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

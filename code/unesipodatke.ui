@@ -330,14 +330,18 @@ border-radius: 20px;</string>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>1260</x>
-     <y>10</y>
+     <x>1240</x>
+     <y>0</y>
      <width>31</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: #bbb;
+    <string notr="true">height: 30px;
+width: 30px;
+background-color: rgb(114, 159, 207);
+font-size:16px;
+
 </string>
    </property>
    <property name="text">

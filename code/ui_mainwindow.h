@@ -92,10 +92,10 @@ public:
 "font-size:18px;"));
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(1160, 0, 31, 31));
+        pushButton_5->setGeometry(QRect(1200, 0, 31, 31));
         pushButton_5->setStyleSheet(QString::fromUtf8("height: 30px;\n"
 "width: 30px;\n"
-"background-color: #bbb;\n"
+"background-color: rgb(114, 159, 207);\n"
 "font-size:16px;\n"
 ""));
         label_3 = new QLabel(centralWidget);
@@ -105,14 +105,6 @@ public:
 "background-color:#ccc;\n"
 "border-radius: 20px;"));
         MainWindow->setCentralWidget(centralWidget);
-        label_3->raise();
-        label->raise();
-        label_2->raise();
-        pushButton->raise();
-        pushButton_2->raise();
-        pushButton_3->raise();
-        pushButton_4->raise();
-        pushButton_5->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1229, 22));

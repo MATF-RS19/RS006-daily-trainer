@@ -184,13 +184,17 @@ font: bold;</string>
    <property name="geometry">
     <rect>
      <x>1190</x>
-     <y>40</y>
+     <y>20</y>
      <width>31</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: #bbb;
+    <string notr="true">height: 30px;
+width: 30px;
+background-color: rgb(114, 159, 207);
+font-size:16px;
+
 </string>
    </property>
    <property name="text">

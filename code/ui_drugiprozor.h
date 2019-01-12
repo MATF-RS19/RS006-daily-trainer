@@ -66,12 +66,6 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(50, 210, 351, 41));
         QFont font1;
-        font1.setBold(true);
-        font1.setItalic(false);
-        font1.setUnderline(false);
-        font1.setWeight(75);
-        font1.setStrikeOut(false);
-        font1.setKerning(true);
         label_2->setFont(font1);
         label_2->setMouseTracking(false);
         label_2->setStyleSheet(QString::fromUtf8("font-size:40px;\n"
@@ -179,7 +173,7 @@ public:
         minutesText->setAcceptRichText(false);
         resetButton = new QPushButton(drugiprozor);
         resetButton->setObjectName(QString::fromUtf8("resetButton"));
-        resetButton->setGeometry(QRect(990, 100, 75, 23));
+        resetButton->setGeometry(QRect(970, 100, 75, 23));
         resetButton->setStyleSheet(QString::fromUtf8("background-color :rgb(239, 41, 41);\n"
 "border-style: solid;\n"
 "border-color: black;\n"
@@ -187,7 +181,7 @@ public:
 "border-radius: 20px;"));
         startStopButton = new QPushButton(drugiprozor);
         startStopButton->setObjectName(QString::fromUtf8("startStopButton"));
-        startStopButton->setGeometry(QRect(880, 100, 75, 23));
+        startStopButton->setGeometry(QRect(860, 100, 75, 23));
         startStopButton->setStyleSheet(QString::fromUtf8("background-color :rgb(115, 210, 22);\n"
 "border-style: solid;\n"
 "border-color: black;\n"

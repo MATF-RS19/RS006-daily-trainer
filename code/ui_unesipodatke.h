@@ -158,8 +158,12 @@ public:
 "border-radius: 20px;"));
         pushButton_5 = new QPushButton(unesiPodatke);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(1260, 10, 31, 31));
-        pushButton_5->setStyleSheet(QString::fromUtf8("background-color: #bbb;\n"
+        pushButton_5->setGeometry(QRect(1240, 0, 31, 31));
+        pushButton_5->setStyleSheet(QString::fromUtf8("height: 30px;\n"
+"width: 30px;\n"
+"background-color: rgb(114, 159, 207);\n"
+"font-size:16px;\n"
+"\n"
 ""));
         pushButton_4 = new QPushButton(unesiPodatke);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));

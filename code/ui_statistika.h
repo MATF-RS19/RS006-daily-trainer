@@ -93,8 +93,12 @@ public:
 "font: bold;"));
         pushButton_5 = new QPushButton(statistika);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(1190, 40, 31, 31));
-        pushButton_5->setStyleSheet(QString::fromUtf8("background-color: #bbb;\n"
+        pushButton_5->setGeometry(QRect(1190, 20, 31, 31));
+        pushButton_5->setStyleSheet(QString::fromUtf8("height: 30px;\n"
+"width: 30px;\n"
+"background-color: rgb(114, 159, 207);\n"
+"font-size:16px;\n"
+"\n"
 ""));
         label_3 = new QLabel(statistika);
         label_3->setObjectName(QString::fromUtf8("label_3"));
