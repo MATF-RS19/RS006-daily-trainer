@@ -10,11 +10,12 @@
 
 <img src="https://imgur.com/QRBoKwU" alt="Unos rezultata"/>
 <img src="https://imgur.com/wzF6V0A" alt="Statistika"/>
+
 ## ▶️ Pokretanje projekta:
-   * Download
-   * Build
-   * Run 
-## 👨‍🎓 Projekat realizovali:<br />
+* Download<br />
+* Build<br />
+* Run <br />
+ ##  👨‍🎓 Projekat realizovali:<br />
 * Jovana Nikolic 3/2015<br />
 * Djordje Vuckovic 31/2015<br />
 * Stefan Stevovic 151/2015
