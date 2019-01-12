@@ -8,5 +8,7 @@
         <file>podaci/slike/pozadina5.jpg</file>
         <file>podaci/slike/help.png</file>
         <file>podaci/slike/statistika.jpg</file>
+        <file>podaci/slike/pozadina8.jpeg</file>
+        <file>podaci/slike/pozadina9.png</file>
     </qresource>
 </RCC>

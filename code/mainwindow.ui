@@ -14,37 +14,37 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#aaa;</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>540</x>
       <y>10</y>
-      <width>431</width>
-      <height>41</height>
+      <width>301</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">text-alignment : center;
-font-size:30px;</string>
+font-size:45px;</string>
     </property>
     <property name="text">
-     <string>Dobrodošli!</string>
+     <string>DOBRODOŠLI!</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>90</y>
       <width>431</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:30px;</string>
+     <string notr="true">font-size:35px;</string>
     </property>
     <property name="text">
      <string>Izaberite težinu treninga:</string>
@@ -53,88 +53,92 @@ font-size:30px;</string>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>960</x>
       <y>590</y>
-      <width>241</width>
-      <height>51</height>
+      <width>231</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color :rgb(115, 210, 22);
+     <string notr="true">background-color:rgb(136, 138, 133);
 border-style: solid;
 border-color: black;
 border-width: 2px;
-border-radius: 20px;</string>
+border-radius: 20px;
+font-size:18px;</string>
     </property>
     <property name="text">
-     <string>Započni trening</string>
+     <string>ZAPOČNI TRENING</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>200</y>
-      <width>211</width>
-      <height>41</height>
+      <x>10</x>
+      <y>160</y>
+      <width>261</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:aqua;
+     <string notr="true">color:rgb(245, 121, 0);
 border-style: solid;
-border-color: black;
+border-color: rgb(245, 121, 0);
 border-width: 2px;
-border-radius: 25px;</string>
+border-radius: 10px;
+font-size:18px;</string>
     </property>
     <property name="text">
-     <string>Početnik</string>
+     <string>POČETNIK</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>200</y>
-      <width>211</width>
-      <height>41</height>
+      <x>10</x>
+      <y>280</y>
+      <width>261</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:aqua;
+     <string notr="true">color:rgb(245, 121, 0);
 border-style: solid;
-border-color: black;
+border-color: rgb(245, 121, 0);
 border-width: 2px;
-border-radius: 25px;</string>
+border-radius: 10px;
+font-size:18px;</string>
     </property>
     <property name="text">
-     <string>Prosek</string>
+     <string>PROSEK</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>200</y>
-      <width>211</width>
-      <height>41</height>
+      <x>10</x>
+      <y>390</y>
+      <width>261</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:aqua;
+     <string notr="true">color:rgb(245, 121, 0);
 border-style: solid;
-border-color: black;
+border-color: rgb(245, 121, 0);
 border-width: 2px;
-border-radius: 25px;background-color:aqua;</string>
+border-radius: 10px;
+font-size:18px;</string>
     </property>
     <property name="text">
-     <string>Profesionalac</string>
+     <string>PROFESIONALAC</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>1150</x>
-      <y>10</y>
+      <x>1160</x>
+      <y>0</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -143,6 +147,7 @@ border-radius: 25px;background-color:aqua;</string>
      <string notr="true">height: 30px;
 width: 30px;
 background-color: #bbb;
+font-size:16px;
 </string>
     </property>
     <property name="text">
@@ -152,8 +157,8 @@ background-color: #bbb;
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>120</y>
+      <x>10</x>
+      <y>80</y>
       <width>891</width>
       <height>421</height>
      </rect>

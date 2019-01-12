@@ -7,6 +7,7 @@
 #include <QWidget>
 #include <QPalette>
 #include <QDesktopWidget>
+#include <QPixmap>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -24,12 +25,23 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     // definisemo pozadinu
-    QPixmap pix(":/podaci/slike/pozadina1.jpeg");
-    pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Background, pix);
-    this->setPalette(palette);
+   // QPixmap pix(":/podaci/slike/pozadina1.jpeg");
+    //pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
+    //QPalette palette;
+    //palette.setBrush(QPalette::Background, pix);
+    //this->setPalette(palette);
 
+    QPixmap bkgnd(":/podaci/slike/pozadina9.png");
+    // definsiemo velicinu pozadine
+    QSize sizeBck;
+    QDesktopWidget dw;
+    sizeBck.setWidth(dw.width() - 65);
+    sizeBck.setHeight(dw.height());
+
+    bkgnd = bkgnd.scaled(sizeBck, Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, bkgnd);
+    this->setPalette(palette);
 
     // dodajemo minimize dugme
     this->setWindowFlags(windowFlags() & Qt::WindowMinimizeButtonHint);

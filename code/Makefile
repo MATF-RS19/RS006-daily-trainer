@@ -738,10 +738,12 @@ qrc_resource.cpp: resource.qrc \
 		podaci/gifovi/trbusnjaci.gif \
 		podaci/gifovi/sklekovi.gif \
 		podaci/slike/help.png \
+		podaci/slike/pozadina8.jpeg \
 		podaci/slike/pozadina1.jpeg \
 		podaci/slike/pozadina5.jpg \
 		podaci/slike/statistika.jpg \
-		podaci/slike/pozadina3.jpg
+		podaci/slike/pozadina3.jpg \
+		podaci/slike/pozadina9.png
 	/home/djordje/Qt/5.12.0/gcc_64/bin/rcc -name resource resource.qrc -o qrc_resource.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -2478,6 +2480,7 @@ mainwindow.o: mainwindow.cpp ../../../Qt/5.12.0/gcc_64/include/QtWidgets/QMessag
 		../../../Qt/5.12.0/gcc_64/include/QtGui/QPalette \
 		../../../Qt/5.12.0/gcc_64/include/QtWidgets/QDesktopWidget \
 		../../../Qt/5.12.0/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt/5.12.0/gcc_64/include/QtGui/QPixmap \
 		mainwindow.h \
 		../../../Qt/5.12.0/gcc_64/include/QtWidgets/QMainWindow \
 		../../../Qt/5.12.0/gcc_64/include/QtWidgets/qmainwindow.h \
