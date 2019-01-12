@@ -7,8 +7,9 @@
 
 ## 💻 Implementacija:
 * Projekat je pisan u Qt Creator-u u C++-u i koriscena je dodatna biblioteka za iscrtavanje grafika QCustomPlot.
-![Prozor za unos rezultata](https://imgur.com/QRBoKwU)
-![Prikaz statistike](https://imgur.com/wzF6V0A)
+
+<img src="https://imgur.com/QRBoKwU" alt="Unos rezultata"/>
+<img src="https://imgur.com/wzF6V0A" alt="Statistika"/>
 ## ▶️ Pokretanje projekta:
    * Download
    * Build
