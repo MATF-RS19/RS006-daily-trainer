@@ -245,9 +245,13 @@ void unesiPodatke::on_pushButton_6_clicked()
         return;
     }
 
+       hide();
+       MainWindow *main=new MainWindow();
+       main->activateWindow();
+       main->raise();
+       main->setFocus();
+       // dodati za vracanje unazad i promenu tezine treninga
 
-    // dodati za vracanje unazad i promenu tezine treninga
-    MainWindow mw;
-    mw.show();
+       main->show();
 }
 
