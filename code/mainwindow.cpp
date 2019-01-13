@@ -24,13 +24,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow){
     ui->setupUi(this);
 
-    // definisemo pozadinu
-   // QPixmap pix(":/podaci/slike/pozadina1.jpeg");
-    //pix = pix.scaled(this->size(), Qt::IgnoreAspectRatio);
-    //QPalette palette;
-    //palette.setBrush(QPalette::Background, pix);
-    //this->setPalette(palette);
-
     QPixmap bkgnd(":/podaci/slike/pozadina9.png");
     // definsiemo velicinu pozadine
     QSize sizeBck;
@@ -87,7 +80,6 @@ void MainWindow::on_pushButton_clicked(){
 
     drugiprozor dp;
     dp.setFixedSize(dw.width()-65, dw.height());
-   // dp.setModal(true);
     dp.exec();
 }
 
@@ -96,9 +88,9 @@ void MainWindow::on_pushButton_2_clicked()
 {
     tezina = 1;
 
-    ui->pushButton_2->setStyleSheet({"background-color:red;"});
-    ui->pushButton_3->setStyleSheet({"background-color:aqua;"});
-    ui->pushButton_4->setStyleSheet({"background-color:aqua;"});
+    ui->pushButton_2->setStyleSheet({"background-color:#FF851B;; border-radius: 10px; font-size:18px;"});
+    ui->pushButton_3->setStyleSheet({"background-color:aqua; border-radius: 10px; font-size:18px;"});
+    ui->pushButton_4->setStyleSheet({"background-color:aqua; border-radius: 10px; font-size:18px;"});
 }
 
 // klik na dugme "prosek"
@@ -106,9 +98,9 @@ void MainWindow::on_pushButton_3_clicked()
 {
    tezina = 2;
 
-   ui->pushButton_3->setStyleSheet({"background-color:red;"});
-   ui->pushButton_2->setStyleSheet({"background-color:aqua;"});
-   ui->pushButton_4->setStyleSheet({"background-color:aqua;"});
+   ui->pushButton_3->setStyleSheet({"background-color:#FF851B;; border-radius: 10px; font-size:18px;"});
+   ui->pushButton_2->setStyleSheet({"background-color:aqua; border-radius: 10px; font-size:18px;"});
+   ui->pushButton_4->setStyleSheet({"background-color:aqua; border-radius: 10px; font-size:18px;"});
 }
 
 // klik na dugme "profesionalac"
@@ -116,9 +108,9 @@ void MainWindow::on_pushButton_4_clicked()
 {
     tezina = 3;
 
-    ui->pushButton_4->setStyleSheet({"background-color:red;"});
-    ui->pushButton_2->setStyleSheet({"background-color:aqua;"});
-    ui->pushButton_3->setStyleSheet({"background-color:aqua;"});
+    ui->pushButton_4->setStyleSheet({"background-color:#FF851B;; border-radius: 10px; font-size:18px;"});
+    ui->pushButton_2->setStyleSheet({"background-color:aqua; border-radius: 10px; font-size:18px;"});
+    ui->pushButton_3->setStyleSheet({"background-color:aqua; border-radius: 10px; font-size:18px;"});
 }
 
 // klik na "help" dugme

@@ -21,6 +21,7 @@ unesiPodatke::unesiPodatke(QWidget *parent) :
     ui(new Ui::unesiPodatke)
 {
     ui->setupUi(this);
+
     QPixmap bkgnd(":/podaci/slike/pozadina5.jpg");
 
     // definsiemo velicinu pozadine
@@ -191,7 +192,6 @@ void unesiPodatke::on_pushButton_2_clicked()
    QDesktopWidget dw;
    statistika s;
 
-   //s.setModal(true);
    s.setFixedSize(dw.width()-65, dw.height());
    s.exec();
 
@@ -230,7 +230,6 @@ void unesiPodatke::on_pushButton_4_clicked()
     drugiprozor dp;
 
     dp.setFixedSize(wid.width()-65, wid.height());
-    //dp.setModal(true);
     dp.exec();
 }
 

@@ -66,27 +66,21 @@ public:
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(10, 160, 261, 71));
-        pushButton_2->setStyleSheet(QString::fromUtf8("color:rgb(245, 121, 0);\n"
-"border-style: solid;\n"
-"border-color: rgb(245, 121, 0);\n"
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color:aqua;\n"
 "border-width: 2px;\n"
 "border-radius: 10px;\n"
 "font-size:18px;"));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(10, 280, 261, 71));
-        pushButton_3->setStyleSheet(QString::fromUtf8("color:rgb(245, 121, 0);\n"
-"border-style: solid;\n"
-"border-color: rgb(245, 121, 0);\n"
+        pushButton_3->setStyleSheet(QString::fromUtf8("background-color:aqua;\n"
 "border-width: 2px;\n"
 "border-radius: 10px;\n"
 "font-size:18px;"));
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         pushButton_4->setGeometry(QRect(10, 390, 261, 71));
-        pushButton_4->setStyleSheet(QString::fromUtf8("color:rgb(245, 121, 0);\n"
-"border-style: solid;\n"
-"border-color: rgb(245, 121, 0);\n"
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color:aqua;\n"
 "border-width: 2px;\n"
 "border-radius: 10px;\n"
 "font-size:18px;"));
@@ -100,7 +94,7 @@ public:
 ""));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(10, 80, 891, 421));
+        label_3->setGeometry(QRect(180, 60, 891, 421));
         label_3->setStyleSheet(QString::fromUtf8("font-size:30px;\n"
 "background-color:#ccc;\n"
 "border-radius: 20px;"));

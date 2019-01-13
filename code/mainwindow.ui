@@ -81,9 +81,7 @@ font-size:18px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(245, 121, 0);
-border-style: solid;
-border-color: rgb(245, 121, 0);
+     <string notr="true">background-color:aqua;
 border-width: 2px;
 border-radius: 10px;
 font-size:18px;</string>
@@ -102,9 +100,7 @@ font-size:18px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(245, 121, 0);
-border-style: solid;
-border-color: rgb(245, 121, 0);
+     <string notr="true">background-color:aqua;
 border-width: 2px;
 border-radius: 10px;
 font-size:18px;</string>
@@ -123,9 +119,7 @@ font-size:18px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(245, 121, 0);
-border-style: solid;
-border-color: rgb(245, 121, 0);
+     <string notr="true">background-color:aqua;
 border-width: 2px;
 border-radius: 10px;
 font-size:18px;</string>
@@ -157,8 +151,8 @@ font-size:16px;
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
+      <x>180</x>
+      <y>60</y>
       <width>891</width>
       <height>421</height>
      </rect>

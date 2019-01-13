@@ -226,6 +226,7 @@ void drugiprozor::on_pushButton_clicked(){
         outtrcanje << minuti << endl;
         trcanje.close();
     }
+
     // sakrivamo trenutni prozor
     hide();
 
@@ -233,7 +234,6 @@ void drugiprozor::on_pushButton_clicked(){
     QDesktopWidget dw;
     unesiPodatke up;
 
-    //up.setModal(true);
     up.setFixedSize(dw.width()-65, dw.height());
     up.exec();
 }
