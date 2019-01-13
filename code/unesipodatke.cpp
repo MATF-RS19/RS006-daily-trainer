@@ -249,8 +249,10 @@ void unesiPodatke::on_pushButton_6_clicked()
        main->activateWindow();
        main->raise();
        main->setFocus();
-       // dodati za vracanje unazad i promenu tezine treninga
 
+       // dodati za vracanje unazad i promenu tezine treninga
+       QDesktopWidget wid;
+       main->setFixedSize(wid.width() - 65, wid.height());
        main->show();
 }
 
